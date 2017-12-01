@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/AccountManager/GetInstance
+permalink: docs/AccountManager/GetInstance/
 
 categories:
     - Менеджер аккаунтов
