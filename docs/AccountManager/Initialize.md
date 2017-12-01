@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/AccountManager/Initialize
+permalink: docs/AccountManager/Initialize/
 
 categories:
     - Менеджер аккаунтов
