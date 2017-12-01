@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Project/GetLogger
+permalink: docs/Project/GetLogger/
 
 categories:
     - Методы расширения IZennoProjectModel

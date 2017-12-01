@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsRange
+permalink: docs/Variables/IsRange/
 
 categories:
     - Методы расширения переменных

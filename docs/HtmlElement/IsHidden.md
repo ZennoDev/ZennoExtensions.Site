@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/IsHidden
+permalink: docs/HtmlElement/IsHidden/
 
 categories:
     - Методы расширения HtmlElement

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Browser/Save
+permalink: docs/Browser/Save/
 
 categories:
     - Настройка браузера

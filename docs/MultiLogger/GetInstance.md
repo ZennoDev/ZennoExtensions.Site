@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/MultiLogger/GetInstance
+permalink: docs/MultiLogger/GetInstance/
 
 categories:
     - Мультилогер

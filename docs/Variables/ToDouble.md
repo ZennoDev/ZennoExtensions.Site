@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToDouble
+permalink: docs/Variables/ToDouble/
 
 categories:
     - Методы расширения переменных

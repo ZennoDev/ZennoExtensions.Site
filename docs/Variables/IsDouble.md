@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsDouble
+permalink: docs/Variables/IsDouble/
 
 categories:
     - Методы расширения переменных

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Int32/UnixTimeToDateTime
+permalink: docs/Int32/UnixTimeToDateTime/
 
 categories:
     - Методы расширения Int32

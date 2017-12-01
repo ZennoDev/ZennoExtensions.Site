@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToRangeOfDates
+permalink: docs/Variables/ToRangeOfDates/
 
 categories:
     - Методы расширения переменных

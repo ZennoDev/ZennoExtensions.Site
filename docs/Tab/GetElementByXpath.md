@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Tab/GetElementByXpath
+permalink: docs/Tab/GetElementByXpath/
 
 categories:
     - Методы расширения Tab

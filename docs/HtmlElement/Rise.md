@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/Rise
+permalink: docs/HtmlElement/Rise/
 
 categories:
     - Методы расширения HtmlElement

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsDate
+permalink: docs/Variables/IsDate/
 
 categories:
     - Методы расширения переменных

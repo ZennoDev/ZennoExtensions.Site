@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Tab/Go
+permalink: docs/Tab/Go/
 
 categories:
     - Методы расширения Tab

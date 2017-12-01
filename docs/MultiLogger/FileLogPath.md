@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/MultiLogger/FileLogPath
+permalink: docs/MultiLogger/FileLogPath/
 
 categories:
     - Мультилогер

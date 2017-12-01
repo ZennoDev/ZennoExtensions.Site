@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsTextFileEmpty
+permalink: docs/Variables/IsTextFileEmpty/
 
 categories:
     - Методы расширения переменных

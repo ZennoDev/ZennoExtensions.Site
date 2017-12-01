@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToRangeOfNumbers
+permalink: docs/Variables/ToRangeOfNumbers/
 
 categories:
     - Методы расширения переменных

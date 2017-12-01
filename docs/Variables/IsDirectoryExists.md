@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsDirectoryExists
+permalink: docs/Variables/IsDirectoryExists/
 
 categories:
     - Методы расширения переменных

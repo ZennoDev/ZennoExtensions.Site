@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/AttributeSet
+permalink: docs/HtmlElement/AttributeSet/
 
 categories:
     - Методы расширения HtmlElement

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsBool
+permalink: docs/Variables/IsBool/
 
 categories:
     - Методы расширения переменных

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ThrowIfNotArray
+permalink: docs/Variables/ThrowIfNotArray/
 
 categories:
     - Методы расширения переменных

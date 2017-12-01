@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Browser/Generate
+permalink: docs/Browser/Generate/
 
 categories:
     - Настройка браузера

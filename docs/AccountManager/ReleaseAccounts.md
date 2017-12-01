@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/AccountManager/ReleaseAccounts
+permalink: docs/AccountManager/ReleaseAccounts/
 
 categories:
     - Менеджер аккаунтов

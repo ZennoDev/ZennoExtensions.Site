@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/ThrowIfNull
+permalink: docs/HtmlElement/ThrowIfNull/
 
 categories:
     - Методы расширения HtmlElement

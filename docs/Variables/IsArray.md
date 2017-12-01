@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsArray
+permalink: docs/Variables/IsArray/
 
 categories:
     - Методы расширения переменных

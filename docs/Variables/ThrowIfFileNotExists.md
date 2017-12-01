@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ThrowIfFileNotExists
+permalink: docs/Variables/ThrowIfFileNotExists/
 
 categories:
     - Методы расширения переменных

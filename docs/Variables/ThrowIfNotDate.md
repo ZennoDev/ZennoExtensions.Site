@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ThrowIfNotDate
+permalink: docs/Variables/ThrowIfNotDate/
 
 categories:
     - Методы расширения переменных

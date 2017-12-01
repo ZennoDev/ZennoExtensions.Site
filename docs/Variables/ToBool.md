@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToBool
+permalink: docs/Variables/ToBool/
 
 categories:
     - Методы расширения переменных

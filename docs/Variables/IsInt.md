@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsInt
+permalink: docs/Variables/IsInt/
 
 categories:
     - Методы расширения переменных

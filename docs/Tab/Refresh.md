@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Tab/Refresh
+permalink: docs/Tab/Refresh/
 
 categories:
     - Методы расширения Tab

@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/AccountManager/GetFreeAccountWithMinExecutionsCount
+permalink: docs/AccountManager/GetFreeAccountWithMinExecutionsCount/
 
 categories:
     - Менеджер аккаунтов

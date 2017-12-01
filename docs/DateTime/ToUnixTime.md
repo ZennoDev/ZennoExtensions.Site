@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/DateTime/ToUnixTime
+permalink: docs/DateTime/ToUnixTime/
 
 categories:
     - Методы расширения DateTime

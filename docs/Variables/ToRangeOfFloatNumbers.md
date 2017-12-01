@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToRangeOfFloatNumbers
+permalink: docs/Variables/ToRangeOfFloatNumbers/
 
 categories:
     - Методы расширения переменных

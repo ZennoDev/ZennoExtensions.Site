@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/MultiLogger/LogTo
+permalink: docs/MultiLogger/LogTo/
 
 categories:
     - Мультилогер

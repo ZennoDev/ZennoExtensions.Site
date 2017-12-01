@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Tab/WaitFor
+permalink: docs/Tab/WaitFor/
 
 categories:
     - Методы расширения Tab

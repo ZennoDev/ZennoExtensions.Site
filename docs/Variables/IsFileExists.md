@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/IsFileExists
+permalink: docs/Variables/IsFileExists/
 
 categories:
     - Методы расширения переменных

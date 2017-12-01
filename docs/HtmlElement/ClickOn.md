@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/ClickOn
+permalink: docs/HtmlElement/ClickOn/
 
 categories:
     - Методы расширения HtmlElement

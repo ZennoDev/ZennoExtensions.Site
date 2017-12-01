@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Instance/ClearCacheAndCookie
+permalink: docs/Instance/ClearCacheAndCookie/
 
 categories:
     - Методы расширения Instance

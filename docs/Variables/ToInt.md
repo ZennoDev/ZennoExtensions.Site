@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToInt
+permalink: docs/Variables/ToInt/
 
 categories:
     - Методы расширения переменных

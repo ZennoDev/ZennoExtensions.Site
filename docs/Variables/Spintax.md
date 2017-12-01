@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/Spintax
+permalink: docs/Variables/Spintax/
 
 categories:
     - Методы расширения переменных

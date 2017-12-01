@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToArray
+permalink: docs/Variables/ToArray/
 
 categories:
     - Методы расширения переменных

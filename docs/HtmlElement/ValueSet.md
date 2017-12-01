@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/ValueSet
+permalink: docs/HtmlElement/ValueSet/
 
 categories:
     - Методы расширения HtmlElement

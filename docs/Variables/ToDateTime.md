@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/Variables/ToDateTime
+permalink: docs/Variables/ToDateTime/
 
 categories:
     - Методы расширения переменных

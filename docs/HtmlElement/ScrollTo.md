@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: /docs/HtmlElement/ScrollTo
+permalink: docs/HtmlElement/ScrollTo/
 
 categories:
     - Методы расширения HtmlElement
