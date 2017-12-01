@@ -1,1 +1,22 @@
-theme: jekyll-theme-slate
+# Main
+title:            ZennoExtensions
+tagline:          'A Jekyll theme'
+description:      'Библиотека для <a href="http://zennolab.com/ru/products/zennoposter/" target="_blank">ZennoPoster</a>'
+url:              "http://localhost:4000"
+baseurl:          ""
+
+# Settings
+markdown:         kramdown
+highlighter:      rouge
+future:           false
+permalink:        /:categories/:title/
+#paginate:         5
+#paginate_path:    '/page:num'
+                    # Or '/blog/page:num' if you want to move your index pages
+
+plugins:
+                  - jekyll-feed
+
+# Sidebar
+sidebar_start_link:   '/start'
+sidebar_docs_link:    '/docs'
