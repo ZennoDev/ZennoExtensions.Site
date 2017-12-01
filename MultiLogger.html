@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+  <title>
+    
+      Работа с мультилогером &middot; ZennoExtensions
+    
+  </title>
+
+  
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css" />
+  
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+<link rel="shortcut icon" href="/favicon.ico" />
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml" />
+
+  <!-- Additional head bits without overriding original head -->
+</head>
+
+
+  <body class="page">
+
+    <div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="/">
+        
+          <span class="back-arrow icon"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 0h24v24H0z" fill="none"/>
+  <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+</svg></span>
+        
+        ZennoExtensions
+      </a>
+    </div>
+    <p class="lead">Библиотека для <a href="http://zennolab.com/ru/products/zennoposter/" target="_blank">ZennoPoster</a></p>
+  </header>
+  
+  <a class="page-link" href="http://zennolab.com/discussion/" target="_blank">Форум ZennoLab</a>
+
+  <br/>
+
+  <div class="lead">Статьи</div>
+  <ul>
+    <li>
+      <a class="page-link "
+         
+         href="/start">Подключение</a>
+    </li>
+    <li>
+      <a class="page-link "
+        
+        href="/AccountManager">Менеджер аккаунтов</a>
+    </li>
+    <li>
+      <a class="page-link "
+        
+        href="/BrowserManager">Настройка браузера</a>
+    </li>
+    <li>
+      <a class="page-link  active"
+         style="color: #00ccff"
+         href="/MultiLogger">Логирование</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/ExtensionMethods">Методы расширения</a>
+    </li>
+  </ul>
+  <a class="page-link "
+     
+     href="/docs">Документация</a>
+  <ul>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#AccountManager">Менеджер аккаунтов</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#Browser">Настройка браузера</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#MultiLogger">Мультилогер</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#Instance">Instance</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#Project">Project</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+      href="/docs/#Variables">Project.Variables</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#Tab">Tab</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#HtmlElement">HtmlElement</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#DateTime">DateTime</a>
+    </li>
+    <li>
+      <a class="page-link "
+         
+         href="/docs/#Int32">Int32</a>
+    </li>
+  </ul>
+
+</div>
+
+    <main class="container">
+      <header>
+  <h1 class="page-title">Работа с мультилогером</h1>
+</header>
+<div class="content">
+  <p>Мультилогер предоставляет возможности одновременного логирования в несколько источников.</p>
+
+<hr />
+
+<p>Функционал работы с логированием находится в пространстве имен <code class="highlighter-rouge">ZennoExtensions.Loggers</code>.<br />
+Для использования подключите пространства имен:</p>
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">ZennoExtensions.Loggers</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">ZennoExtensions.Enums</span><span class="p">;</span>
+</code></pre></div></div>
+
+<hr />
+
+<p>Чтобы начать работу с мультилоггером нужно получить единственный для всех потоков экземпляр класса <code class="highlighter-rouge">MultiLogger</code>.
+Это можно сделать двумя способами:</p>
+<ul>
+  <li>обратившись к статическому методу <code class="highlighter-rouge">MultiLogger.GetInstance(IZennoPosterProjectModel project)</code></li>
+  <li>или же вызвав метод расширения <code class="highlighter-rouge">project.GetLogger()</code>.</li>
+</ul>
+
+<p>Далее по желанию можно настроить способы логирования через свойство <code class="highlighter-rouge">LogTo</code>, которое принимает перечисление типа <code class="highlighter-rouge">Logger</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="n">project</span><span class="p">.</span><span class="nf">GetLogger</span><span class="p">();</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">LogTo</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ProjectMaker</span> <span class="p">|</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ZennoPoster</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>Перечисление <code class="highlighter-rouge">Logger</code> содержит следующие значения:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">ProjectMaker</code> — вывод сообщения в лог ProjectMaker;</li>
+  <li><code class="highlighter-rouge">ZennoPoster</code> — вывод сообщения в лог ZennoPoster;</li>
+  <li><code class="highlighter-rouge">File</code> — логирование в файл;</li>
+  <li><code class="highlighter-rouge">Custom</code> — логирование через ваш логер.</li>
+</ul>
+
+<p>По умолчанию значение <code class="highlighter-rouge">LogTo</code> это комбинация следующих логеров:<br />
+<code class="highlighter-rouge">Logger.ProjectMaker | Logger.ZennoPoster | Logger.Custom</code>.</p>
+
+<p>Теперь можно вызывать метод <code class="highlighter-rouge">MultiLog(string message, MessageType messageTypeType)</code>, который принимает сообщение и его тип. В зависимости от типа сообщения (<code class="highlighter-rouge">Error</code>, <code class="highlighter-rouge">Info</code>, <code class="highlighter-rouge">Warning</code>) меняется иконка в логе ProjectMaker и ZennoPoster.</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="n">project</span><span class="p">.</span><span class="nf">GetLogger</span><span class="p">();</span>
+<span class="n">logger</span><span class="p">.</span><span class="nf">MultiLog</span><span class="p">(</span><span class="s">"Тестовая запись в лог"</span><span class="p">,</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Warning</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Чтобы включить файловый логгер нужно установить путь к логу через свойство <code class="highlighter-rouge">FileLogPath</code> и добавить в способы логирования <code class="highlighter-rouge">Logger.File</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="n">project</span><span class="p">.</span><span class="nf">GetLogger</span><span class="p">();</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">LogTo</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ProjectMaker</span> <span class="p">|</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ZennoPoster</span> <span class="p">|</span> <span class="n">Logger</span><span class="p">.</span><span class="n">File</span><span class="p">;</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">FileLogPath</span> <span class="p">=</span> <span class="s">@"C:\mylog.txt"</span><span class="p">;</span>
+<span class="n">logger</span><span class="p">.</span><span class="nf">MultiLog</span><span class="p">(</span><span class="s">"Тестовая запись в лог"</span><span class="p">,</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h3 id="использование-конкретных-логеров">Использование конкретных логеров</h3>
+
+<p>В мультилогере есть возможность логировать через конкретный логер невзирая на значения свойства <code class="highlighter-rouge">LogTo</code>:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">LogToProjectMaker(string message, bool logToZennoPoster, MessageType messageTypeType)</code> — вывод сообщения в лог ProjectMaker;</li>
+  <li><code class="highlighter-rouge">LogToFile(string message, MessageType messageTypeType)</code> — логирование в файл, указанный в свойстве <code class="highlighter-rouge">FileLogPath</code>;</li>
+  <li><code class="highlighter-rouge">LogByCustom(string message, MessageType messageTypeType)</code> — логирование через набор ваших логеров.</li>
+</ul>
+
+<hr />
+
+<h2 id="создание-своего-логера">Создание своего логера</h2>
+
+<p>Вы можете добавить в мультилогер свой вариант логирования. 
+Например, создадим логер, который будет выводить диалоговое окно с указанным сообщением.</p>
+
+<p>Сначала нужно создать класс который будет реализовывать интерфейс <code class="highlighter-rouge">ILogger</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">public</span> <span class="k">class</span> <span class="nc">MessageBoxLogger</span> <span class="p">:</span> <span class="n">ILogger</span>
+<span class="p">{</span>
+	<span class="k">public</span> <span class="k">void</span> <span class="nf">Log</span><span class="p">(</span><span class="kt">string</span> <span class="n">message</span><span class="p">,</span> <span class="n">MessageType</span> <span class="n">messageTypeType</span> <span class="p">=</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Info</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">switch</span> <span class="p">(</span><span class="n">messageTypeType</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">case</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Info</span><span class="p">:</span>
+				<span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s">"Информация"</span><span class="p">,</span> <span class="n">MessageBoxButtons</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span> <span class="n">MessageBoxIcon</span><span class="p">.</span><span class="n">Information</span><span class="p">);</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Warning</span><span class="p">:</span>
+				<span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s">"Внимание"</span><span class="p">,</span> <span class="n">MessageBoxButtons</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span> <span class="n">MessageBoxIcon</span><span class="p">.</span><span class="n">Warning</span><span class="p">);</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Error</span><span class="p">:</span>
+				<span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="s">"Ошибка"</span><span class="p">,</span> <span class="n">MessageBoxButtons</span><span class="p">.</span><span class="n">OK</span><span class="p">,</span> <span class="n">MessageBoxIcon</span><span class="p">.</span><span class="n">Error</span><span class="p">);</span>
+				<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>       
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Теперь нужно создать экземпляр класса <code class="highlighter-rouge">MessageBoxLogger</code> и добавить его в коллекцию <code class="highlighter-rouge">CustomLoggers</code> в мультилогере:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">var</span> <span class="n">logger</span> <span class="p">=</span> <span class="n">project</span><span class="p">.</span><span class="nf">GetLogger</span><span class="p">();</span>
+<span class="kt">var</span> <span class="n">messageBoxLogger</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">MessageBoxLogger</span><span class="p">();</span>
+<span class="n">logger</span><span class="p">.</span><span class="n">CustomLoggers</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">messageBoxLogger</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Чтобы воспользоваться нашим новым логером можно вызвать метод <code class="highlighter-rouge">LogByCustom</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logger</span><span class="p">.</span><span class="nf">LogByCustom</span><span class="p">(</span><span class="s">"Hello!"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>Или можно активировать пользовательские логеры через свойство <code class="highlighter-rouge">LogTo</code> и вызвать метод <code class="highlighter-rouge">MultiLog</code>:</p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">logger</span><span class="p">.</span><span class="n">LogTo</span> <span class="p">=</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ProjectMaker</span> <span class="p">|</span> <span class="n">Logger</span><span class="p">.</span><span class="n">ZennoPoster</span> <span class="p">|</span> <span class="n">Logger</span><span class="p">.</span><span class="n">Custom</span><span class="p">;</span>
+<span class="n">logger</span><span class="p">.</span><span class="nf">MultiLog</span><span class="p">(</span><span class="s">"Тестовая запись в лог"</span><span class="p">,</span> <span class="n">MessageType</span><span class="p">.</span><span class="n">Warning</span><span class="p">);</span>
+</code></pre></div></div>
+
+</div>
+
+    </main>
+
+    <!-- Optional footer content -->
+
+  </body>
+</html>
