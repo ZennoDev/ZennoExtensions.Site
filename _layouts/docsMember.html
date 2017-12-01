@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<header>
+  <h1 class="post-title">{{ page.title }}</h1>
+</header>
+
+<div class="content">
+    {% include post-meta.html post=page %}
+    <blockquote>{{ page.member.summary }}</blockquote>
+    <b>
+        {% if page.member.type == "method" %}
+            Метод:
+        {% elsif page.member.type == "property" %}
+            Свойство:
+        {% endif %}
+    </b>{{ page.member.name }}<br/>
+    {% if page.member.syntax %} <b>Синтаксис: </b><code>{{ page.member.syntax }}</code><br/>{% endif %}
+    {% if page.member.params %}
+        <b>Параметры: </b>
+        <ul>
+        {% for param in page.member.params %}
+            <li>{{ param.name }}: {{ param.value }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+    {% if page.member.returns %}<b>Результат: </b>{{ page.member.returns }}<br/>{% endif %}
+
+    <hr>
+    <div class="post-body">
+        {% if page.content != '' %}
+            <b>Пример:</b><br/>
+            {{ content }}
+        {% endif %}
+        {% include post-tags.html post=page %}
+    </div>
+    {% if page.comments %}
+        {% include comments.html %}
+    {% endif %}
+    {% if page.related_posts %}
+        {% include related_posts.html %}
+    {% endif %}
+</div>

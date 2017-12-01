@@ -1,0 +1,102 @@
+<div id="sidebar">
+  <header>
+    <div class="site-title">
+      <a href="{{ site.baseurl }}/">
+        {% unless page.url == "/" %}
+          <span class="back-arrow icon">{% include svg/back-arrow.svg %}</span>
+        {% endunless %}
+        {{ site.title }}
+      </a>
+    </div>
+    <p class="lead">{{ site.description }}</p>
+  </header>
+  
+  <a class="page-link" href="http://zennolab.com/discussion/" target="_blank">Форум ZennoLab</a>
+
+  <br/>
+
+  <div class="lead">Статьи</div>
+  <ul>
+    <li>
+      <a class="page-link {% if page.url == site.sidebar_start_link %} active{% endif %}"
+         {% if page.url == site.sidebar_start_link %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_start_link }}">Подключение</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url == '/AccountManager' %} active{% endif %}"
+        {% if page.url == '/AccountManager' %}style="color: #00ccff"{% endif %}
+        href="{{ site.baseurl }}/AccountManager">Менеджер аккаунтов</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url == '/BrowserManager' %} active{% endif %}"
+        {% if page.url == '/BrowserManager' %}style="color: #00ccff"{% endif %}
+        href="{{ site.baseurl }}/BrowserManager">Настройка браузера</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url == '/MultiLogger' %} active{% endif %}"
+         {% if page.url == '/MultiLogger' %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}/MultiLogger">Логирование</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url == '/ExtensionMethods' %} active{% endif %}"
+         {% if page.url == '/ExtensionMethods' %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}/ExtensionMethods">Методы расширения</a>
+    </li>
+  </ul>
+  <a class="page-link {% if page.url == site.sidebar_docs_link %} active{% endif %}"
+     {% if page.url == site.sidebar_docs_link %}style="color: #00ccff"{% endif %}
+     href="{{ site.baseurl }}{{ site.sidebar_docs_link }}">Документация</a>
+  <ul>
+    <li>
+      <a class="page-link {% if page.url contains 'docs/AccountManager' %} active {% endif %}"
+         {% if page.url contains "docs/AccountManager" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#AccountManager">Менеджер аккаунтов</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'docs/Browser' %} active {% endif %}"
+         {% if page.url contains "docs/Browser" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Browser">Настройка браузера</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url == 'MultiLogger' %} active {% endif %}"
+         {% if page.url == "MultiLogger" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#MultiLogger">Мультилогер</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains '/Instance' %} active{% endif %}"
+         {% if page.url contains "/Instance" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Instance">Instance</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'Project' %} active{% endif %}"
+         {% if page.url contains "Project" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Project">Project</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'Variables' %} active{% endif %}"
+         {% if page.url contains "Variables" %}style="color: #00ccff"{% endif %}
+      href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Variables">Project.Variables</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'Tab' %} active{% endif %}"
+         {% if page.url contains "Tab" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Tab">Tab</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'HtmlElement' %} active{% endif %}"
+         {% if page.url contains "HtmlElement" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#HtmlElement">HtmlElement</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains '/DateTime' %} active{% endif %}"
+         {% if page.url contains "/DateTime" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#DateTime">DateTime</a>
+    </li>
+    <li>
+      <a class="page-link {% if page.url contains 'Int32' %} active{% endif %}"
+         {% if page.url contains "Int32" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}/#Int32">Int32</a>
+    </li>
+  </ul>
+
+</div>
