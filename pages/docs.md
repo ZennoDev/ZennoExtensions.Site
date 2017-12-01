@@ -25,11 +25,11 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[GetInstance](/docs/AccountManager/GetInstance/) | Возвращает экземпляр класса AccountManager.
-[Initialize](/docs/AccountManager/Initialize/) | Производит инициализацию менеджера аккаунтов.Сопоставляет существующую конфигурацию аккаунтов или создает новую для файла с аккаунтами.
-[GetFreeAccountWithMinExecutionsCount](/docs/AccountManager/GetFreeAccountWithMinExecutionsCount/) | Возвращает свободный аккаунт с наименьшим количеством запусков.
-[GetAccount](/docs/AccountManager/GetAccount/) | Возвращает аккаунт, удовлетворяющий предикату.
-[ReleaseAccounts](/docs/AccountManager/ReleaseAccounts/) | Освобождает все аккаунты для которых предикат возвращает true.
+[GetInstance]({{ site.url }}/docs/AccountManager/GetInstance/) | Возвращает экземпляр класса AccountManager.
+[Initialize]({{ site.url }}/docs/AccountManager/Initialize/) | Производит инициализацию менеджера аккаунтов.Сопоставляет существующую конфигурацию аккаунтов или создает новую для файла с аккаунтами.
+[GetFreeAccountWithMinExecutionsCount]({{ site.url }}/docs/AccountManager/GetFreeAccountWithMinExecutionsCount/) | Возвращает свободный аккаунт с наименьшим количеством запусков.
+[GetAccount]({{ site.url }}/docs/AccountManager/GetAccount/) | Возвращает аккаунт, удовлетворяющий предикату.
+[ReleaseAccounts]({{ site.url }}/docs/AccountManager/ReleaseAccounts/) | Освобождает все аккаунты для которых предикат возвращает true.
 
 ***
 
@@ -39,11 +39,11 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[BrowserManager.Generate](/docs/Browser/Generate/) | Генерация профиля браузера.
-[BrowserManager.Setup](/docs/Browser/Setup/) | Применяет конфигурацию к ZennoPoster&lsquo;y.
-[BrowserManager.Save](/docs/Browser/Save/) | Сериализует и сохраняет объект профиля браузера.
-[BrowserManager.Load](/docs/Browser/Load/) | Загружает объект профиля браузера, сохраненный в файл.
-[BrowserManager.LoadFromString](/docs/Browser/LoadFromString/) | Загружает объект профиля браузера, сохраненный в строку.
+[BrowserManager.Generate]({{ site.url }}/docs/Browser/Generate/) | Генерация профиля браузера.
+[BrowserManager.Setup]({{ site.url }}/docs/Browser/Setup/) | Применяет конфигурацию к ZennoPoster&lsquo;y.
+[BrowserManager.Save]({{ site.url }}/docs/Browser/Save/) | Сериализует и сохраняет объект профиля браузера.
+[BrowserManager.Load]({{ site.url }}/docs/Browser/Load/) | Загружает объект профиля браузера, сохраненный в файл.
+[BrowserManager.LoadFromString]({{ site.url }}/docs/Browser/LoadFromString/) | Загружает объект профиля браузера, сохраненный в строку.
 
 ***
 
@@ -53,11 +53,11 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[GetInstance](/docs/MultiLogger/GetInstance/) | Возвращает экземпляр класса MultiLogger.
-[MultiLog](/docs/MultiLogger/MultiLog/) | Логирование через набор логгеров, установленных через свойство LogTo.
-[LogToProjectMaker](/docs/MultiLogger/LogToProjectMaker/) | Вывод сообщения в лог ProjectMaker.Обертка над методами project.Send***ToLog.
-[LogToFile](/docs/MultiLogger/LogToFile/) | Логирование в файл.
-[LogByCustom](/docs/MultiLogger/LogByCustom/) | Логирование через набор пользовательских логгеров, установленных в свойстве CustomLoggers.
+[GetInstance]({{ site.url }}/docs/MultiLogger/GetInstance/) | Возвращает экземпляр класса MultiLogger.
+[MultiLog]({{ site.url }}/docs/MultiLogger/MultiLog/) | Логирование через набор логгеров, установленных через свойство LogTo.
+[LogToProjectMaker]({{ site.url }}/docs/MultiLogger/LogToProjectMaker/) | Вывод сообщения в лог ProjectMaker.Обертка над методами project.Send***ToLog.
+[LogToFile]({{ site.url }}/docs/MultiLogger/LogToFile/) | Логирование в файл.
+[LogByCustom]({{ site.url }}/docs/MultiLogger/LogByCustom/) | Логирование через набор пользовательских логгеров, установленных в свойстве CustomLoggers.
 
 ***
 
@@ -67,7 +67,7 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[instance.ClearCacheAndCookie](/docs/Instance/ClearCacheAndCookie/) | Очищает кэш и куки
+[instance.ClearCacheAndCookie]({{ site.url }}/docs/Instance/ClearCacheAndCookie/) | Очищает кэш и куки
 
 ***
 
@@ -77,7 +77,7 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[project.GetLogger](/docs/Project/GetLogger/) | Возвращает объект мультилоггера.
+[project.GetLogger]({{ site.url }}/docs/Project/GetLogger/) | Возвращает объект мультилоггера.
 
 ***
 
@@ -87,37 +87,37 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[IsEmpty](/docs/Variables/IsEmpty/) | Проверяет указано ли значение переменной.
-[IsInt](/docs/Variables/IsInt/) | Проверяет является ли значение переменной целым числом.
-[IsDouble](/docs/Variables/IsDouble/) | Проверяет является ли значение переменной вещественным числом.
-[IsBool](/docs/Variables/IsBool/) | Проверяет является ли значение переменной логическим значением.
-[IsDate](/docs/Variables/IsDate/) | Проверяет является ли значение переменной датой.
-[IsFileExists](/docs/Variables/IsFileExists/) | Проверяет существует ли файл по указанному пути.
-[IsTextFileEmpty](/docs/Variables/IsTextFileEmpty/) | Проверяет пуст ли текстовый файл.
-[IsDirectoryExists](/docs/Variables/IsDirectoryExists/) | Проверяет существует ли директория по указанному пути.
-[IsDirectoryEmpty](/docs/Variables/IsDirectoryEmpty/) | Проверяет есть ли файлы в директории.
-[IsArray](/docs/Variables/IsArray/) | Проверяет является ли строка массивом данных.
-[IsRange](/docs/Variables/IsRange/) | Проверяет является ли значение переменной диапазоном чисел или дат.
-[ToRangeOfFloatNumbers](/docs/Variables/ToRangeOfFloatNumbers/) | Конвертирует строковое значение переменной в диапазон вещественных чисел.
-[ToRangeOfNumbers](/docs/Variables/ToRangeOfNumbers/) | Конвертирует строковое значение переменной в диапазон целых чисел.
-[ToRangeOfDates](/docs/Variables/ToRangeOfDates/) | Конвертирует строковое значение переменной в диапазон дат.
-[ToBool](/docs/Variables/ToBool/) | Конвертирует строковое значение переменной в Boolean.
-[ToInt](/docs/Variables/ToInt/) | Конвертирует строковое значение переменной в Int32.
-[ToDouble](/docs/Variables/ToDouble/) | Конвертирует строковое значение переменной в Double.
-[ToDateTime](/docs/Variables/ToDateTime/) | Конвертирует строковое значение переменной в DateTime.
-[ToArray](/docs/Variables/ToArray/) | Разбивает строковое значение переменной на массив значений.
-[Spintax](/docs/Variables/Spintax/) | Применяет Spintax к содержимому переменной.
-[ThrowIfEmpty](/docs/Variables/ThrowIfEmpty/) | Бросает исключение, если переменная пустая.
-[ThrowIfNotInt](/docs/Variables/ThrowIfNotInt/) | Бросает исключение, если значение переменной не является целым числом.
-[ThrowIfNotBool](/docs/Variables/ThrowIfNotBool/) | Бросает исключение, если значение переменной не является логическим значением.
-[ThrowIfNotDouble](/docs/Variables/ThrowIfNotDouble/) | Бросает исключение, если значение переменной не является вещественным числом.
-[ThrowIfNotDate](/docs/Variables/ThrowIfNotDate/) | Бросает исключение, если значение переменной не является датой.
-[ThrowIfNotArray](/docs/Variables/ThrowIfNotArray/) | Бросает исключение, если значение переменной не является массивом данных.
-[ThrowIfFileNotExists](/docs/Variables/ThrowIfFileNotExists/) | Бросает исключение, если файл не существует по указанному пути.
-[ThrowIfTextFileIsEmpty](/docs/Variables/ThrowIfTextFileIsEmpty/) | Бросает исключение, если файл пуст.
-[ThrowIfDirectoryNotExists](/docs/Variables/ThrowIfDirectoryNotExists/) | Бросает исключение, если директория не существует по указанному пути.
-[ThrowIfDirectoryIsEmpty](/docs/Variables/ThrowIfDirectoryIsEmpty/) | Бросает исключение, если директория пуста.
-[ThrowIfNotRange](/docs/Variables/ThrowIfNotRange/) | Бросает исключение, если значение переменной не является диапазоном.
+[IsEmpty]({{ site.url }}/docs/Variables/IsEmpty/) | Проверяет указано ли значение переменной.
+[IsInt]({{ site.url }}/docs/Variables/IsInt/) | Проверяет является ли значение переменной целым числом.
+[IsDouble]({{ site.url }}/docs/Variables/IsDouble/) | Проверяет является ли значение переменной вещественным числом.
+[IsBool]({{ site.url }}/docs/Variables/IsBool/) | Проверяет является ли значение переменной логическим значением.
+[IsDate]({{ site.url }}/docs/Variables/IsDate/) | Проверяет является ли значение переменной датой.
+[IsFileExists]({{ site.url }}/docs/Variables/IsFileExists/) | Проверяет существует ли файл по указанному пути.
+[IsTextFileEmpty]({{ site.url }}/docs/Variables/IsTextFileEmpty/) | Проверяет пуст ли текстовый файл.
+[IsDirectoryExists]({{ site.url }}/docs/Variables/IsDirectoryExists/) | Проверяет существует ли директория по указанному пути.
+[IsDirectoryEmpty]({{ site.url }}/docs/Variables/IsDirectoryEmpty/) | Проверяет есть ли файлы в директории.
+[IsArray]({{ site.url }}/docs/Variables/IsArray/) | Проверяет является ли строка массивом данных.
+[IsRange]({{ site.url }}/docs/Variables/IsRange/) | Проверяет является ли значение переменной диапазоном чисел или дат.
+[ToRangeOfFloatNumbers]({{ site.url }}/docs/Variables/ToRangeOfFloatNumbers/) | Конвертирует строковое значение переменной в диапазон вещественных чисел.
+[ToRangeOfNumbers]({{ site.url }}/docs/Variables/ToRangeOfNumbers/) | Конвертирует строковое значение переменной в диапазон целых чисел.
+[ToRangeOfDates]({{ site.url }}/docs/Variables/ToRangeOfDates/) | Конвертирует строковое значение переменной в диапазон дат.
+[ToBool]({{ site.url }}/docs/Variables/ToBool/) | Конвертирует строковое значение переменной в Boolean.
+[ToInt]({{ site.url }}/docs/Variables/ToInt/) | Конвертирует строковое значение переменной в Int32.
+[ToDouble]({{ site.url }}/docs/Variables/ToDouble/) | Конвертирует строковое значение переменной в Double.
+[ToDateTime]({{ site.url }}/docs/Variables/ToDateTime/) | Конвертирует строковое значение переменной в DateTime.
+[ToArray]({{ site.url }}/docs/Variables/ToArray/) | Разбивает строковое значение переменной на массив значений.
+[Spintax]({{ site.url }}/docs/Variables/Spintax/) | Применяет Spintax к содержимому переменной.
+[ThrowIfEmpty]({{ site.url }}/docs/Variables/ThrowIfEmpty/) | Бросает исключение, если переменная пустая.
+[ThrowIfNotInt]({{ site.url }}/docs/Variables/ThrowIfNotInt/) | Бросает исключение, если значение переменной не является целым числом.
+[ThrowIfNotBool]({{ site.url }}/docs/Variables/ThrowIfNotBool/) | Бросает исключение, если значение переменной не является логическим значением.
+[ThrowIfNotDouble]({{ site.url }}/docs/Variables/ThrowIfNotDouble/) | Бросает исключение, если значение переменной не является вещественным числом.
+[ThrowIfNotDate]({{ site.url }}/docs/Variables/ThrowIfNotDate/) | Бросает исключение, если значение переменной не является датой.
+[ThrowIfNotArray]({{ site.url }}/docs/Variables/ThrowIfNotArray/) | Бросает исключение, если значение переменной не является массивом данных.
+[ThrowIfFileNotExists]({{ site.url }}/docs/Variables/ThrowIfFileNotExists/) | Бросает исключение, если файл не существует по указанному пути.
+[ThrowIfTextFileIsEmpty]({{ site.url }}/docs/Variables/ThrowIfTextFileIsEmpty/) | Бросает исключение, если файл пуст.
+[ThrowIfDirectoryNotExists]({{ site.url }}/docs/Variables/ThrowIfDirectoryNotExists/) | Бросает исключение, если директория не существует по указанному пути.
+[ThrowIfDirectoryIsEmpty]({{ site.url }}/docs/Variables/ThrowIfDirectoryIsEmpty/) | Бросает исключение, если директория пуста.
+[ThrowIfNotRange]({{ site.url }}/docs/Variables/ThrowIfNotRange/) | Бросает исключение, если значение переменной не является диапазоном.
 
 ***
 
@@ -127,11 +127,11 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[tab.Go](/docs/Tab/Go/) | Выполняет переход по указанному Url. Обертка над Navigate.
-[tab.Refresh](/docs/Tab/Refresh/) | Выполняет обновление текущей страницы.
-[tab.WaitLoading](/docs/Tab/WaitLoading/) | Выполняет ожидание полной прогрузки страницы.
-[tab.GetElementByXpath](/docs/Tab/GetElementByXpath/) | Находит элемент по XPath. Обертка над FindElementByXPath.
-[tab.WaitFor](/docs/Tab/WaitFor/) | Выполняет ожидание, пока на странице не будет выполнено условие.
+[tab.Go]({{ site.url }}/docs/Tab/Go/) | Выполняет переход по указанному Url. Обертка над Navigate.
+[tab.Refresh]({{ site.url }}/docs/Tab/Refresh/) | Выполняет обновление текущей страницы.
+[tab.WaitLoading]({{ site.url }}/docs/Tab/WaitLoading/) | Выполняет ожидание полной прогрузки страницы.
+[tab.GetElementByXpath]({{ site.url }}/docs/Tab/GetElementByXpath/) | Находит элемент по XPath. Обертка над FindElementByXPath.
+[tab.WaitFor]({{ site.url }}/docs/Tab/WaitFor/) | Выполняет ожидание, пока на странице не будет выполнено условие.
 
 ***
 
@@ -141,17 +141,17 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[element.IsHidden](/docs/HtmlElement/IsHidden/) | Проверяет скрыт ли элемент.
-[element.Rise](/docs/HtmlElement/Rise/) | Выполняет событие для элемента.
-[element.ClickOn](/docs/HtmlElement/ClickOn/) | Выполняет клик по элементу.
-[element.AttributeSet](/docs/HtmlElement/AttributeSet/) | Устанавливает значение атрибуа элемента.
-[element.AttributeGet](/docs/HtmlElement/AttributeGet/) | Получает значение атрибуа элемента.
-[element.ValueSet](/docs/HtmlElement/ValueSet/) | Устанавливает значение элемента.
-[element.ValueGet](/docs/HtmlElement/ValueGet/) | Возвращает значение элемента. Обертка над GetValue();
-[element.ScrollTo](/docs/HtmlElement/ScrollTo/) | Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().
-[element.ThrowIfNull](/docs/HtmlElement/ThrowIfNull/) | Бросает исключение, если элемент пуст (свойство IsVoid возвращает true).
-[element.ThrowIfHidden](/docs/HtmlElement/ThrowIfHidden/) | Бросает исключение, если елемент скрыт.
-[element.ThrowIfNullOrHidden](/docs/HtmlElement/ThrowIfNullOrHidden/) | Бросает исключение, если елемент пуст (свойство IsVoid возвращает true) или скрыт.
+[element.IsHidden]({{ site.url }}/docs/HtmlElement/IsHidden/) | Проверяет скрыт ли элемент.
+[element.Rise]({{ site.url }}/docs/HtmlElement/Rise/) | Выполняет событие для элемента.
+[element.ClickOn]({{ site.url }}/docs/HtmlElement/ClickOn/) | Выполняет клик по элементу.
+[element.AttributeSet]({{ site.url }}/docs/HtmlElement/AttributeSet/) | Устанавливает значение атрибуа элемента.
+[element.AttributeGet]({{ site.url }}/docs/HtmlElement/AttributeGet/) | Получает значение атрибуа элемента.
+[element.ValueSet]({{ site.url }}/docs/HtmlElement/ValueSet/) | Устанавливает значение элемента.
+[element.ValueGet]({{ site.url }}/docs/HtmlElement/ValueGet/) | Возвращает значение элемента. Обертка над GetValue();
+[element.ScrollTo]({{ site.url }}/docs/HtmlElement/ScrollTo/) | Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().
+[element.ThrowIfNull]({{ site.url }}/docs/HtmlElement/ThrowIfNull/) | Бросает исключение, если элемент пуст (свойство IsVoid возвращает true).
+[element.ThrowIfHidden]({{ site.url }}/docs/HtmlElement/ThrowIfHidden/) | Бросает исключение, если елемент скрыт.
+[element.ThrowIfNullOrHidden]({{ site.url }}/docs/HtmlElement/ThrowIfNullOrHidden/) | Бросает исключение, если елемент пуст (свойство IsVoid возвращает true) или скрыт.
 
 ***
 
@@ -161,7 +161,7 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[date.ToUnixTime](/docs/DateTime/ToUnixTime/) | Конвертирует дату в число в формате UnixTime.
+[date.ToUnixTime]({{ site.url }}/docs/DateTime/ToUnixTime/) | Конвертирует дату в число в формате UnixTime.
 
 ***
 
@@ -171,7 +171,7 @@ permalink: /docs
 
 Метод | Описание
 ------------ | -------------
-[number.UnixTimeToDateTime](/docs/Int32/UnixTimeToDateTime/) | Конвертирует число представляющее UnixTime в соответствующую дату в формате DateTime.
+[number.UnixTimeToDateTime]({{ site.url }}/docs/Int32/UnixTimeToDateTime/) | Конвертирует число представляющее UnixTime в соответствующую дату в формате DateTime.
 
 ***
 
