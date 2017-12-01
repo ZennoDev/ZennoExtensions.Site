@@ -2,7 +2,7 @@
 title:            ZennoExtensions
 tagline:          'A Jekyll theme'
 description:      'Библиотека для <a href="http://zennolab.com/ru/products/zennoposter/" target="_blank">ZennoPoster</a>'
-url:              "http://localhost:4000"
+url:              "https://github.com/ZennoDev/ZennoExtensions.Site"
 baseurl:          ""
 
 # Settings
