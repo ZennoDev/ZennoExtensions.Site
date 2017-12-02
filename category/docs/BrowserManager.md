@@ -1,5 +1,5 @@
 ---
 layout: category
 title: Настройка браузера
-permalink: /docs#Browser
+permalink: /docs#BrowserManager
 ---
