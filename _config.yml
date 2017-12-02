@@ -1,6 +1,5 @@
 # Main
 title:            ZennoExtensions
-tagline:          'A Jekyll theme'
 description:      'Библиотека для <a href="http://zennolab.com/ru/products/zennoposter/" target="_blank">ZennoPoster</a>'
 url:              "https://zennodev.github.io/ZennoExtensions.Site"
 baseurl:          "https://zennodev.github.io/ZennoExtensions.Site"
@@ -8,11 +7,6 @@ baseurl:          "https://zennodev.github.io/ZennoExtensions.Site"
 # Settings
 markdown:         kramdown
 highlighter:      rouge
-future:           false
-permalink:        /:categories/:title/
-#paginate:         5
-#paginate_path:    '/page:num'
-                    # Or '/blog/page:num' if you want to move your index pages
 
 plugins:
                   - jekyll-feed
