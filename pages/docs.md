@@ -7,7 +7,7 @@ permalink: /docs
 Здесь представлен список всех доступных методов библиотеки.
 
 * [Менеджер аккаунтов](#AccountManager)
-* [Настройка браузера](#Browser)
+* [Настройка браузера](#BrowserManager)
 * [Мультилогер](#MultiLogger)
 * [Методы расширения ZennoLab.CommandCenter.Instance](#Instance)
 * [Методы расширения ZennoLab.InterfacesLibrary.ProjectModel.IZennoPosterProjectModel](#Project)
@@ -33,17 +33,17 @@ permalink: /docs
 
 ***
 
-<a name="Browser"></a>
+<a name="BrowserManager"></a>
 ## Настройка браузера
 Гибкая генерация свойств навигатора, UserAgent'а, отпечатков и множества других параметров.
 
 Метод | Описание
 ------------ | -------------
-[BrowserManager.Generate]({{ site.url }}/docs/Browser/Generate/) | Генерация профиля браузера.
-[BrowserManager.Setup]({{ site.url }}/docs/Browser/Setup/) | Применяет конфигурацию к ZennoPoster&lsquo;y.
-[BrowserManager.Save]({{ site.url }}/docs/Browser/Save/) | Сериализует и сохраняет объект профиля браузера.
-[BrowserManager.Load]({{ site.url }}/docs/Browser/Load/) | Загружает объект профиля браузера, сохраненный в файл.
-[BrowserManager.LoadFromString]({{ site.url }}/docs/Browser/LoadFromString/) | Загружает объект профиля браузера, сохраненный в строку.
+[BrowserManager.Generate]({{ site.url }}/docs/BrowserManager/Generate/) | Генерация профиля браузера.
+[BrowserManager.Setup]({{ site.url }}/docs/BrowserManager/Setup/) | Применяет конфигурацию к ZennoPoster&lsquo;y.
+[BrowserManager.Save]({{ site.url }}/docs/BrowserManager/Save/) | Сериализует и сохраняет объект профиля браузера.
+[BrowserManager.Load]({{ site.url }}/docs/BrowserManager/Load/) | Загружает объект профиля браузера, сохраненный в файл.
+[BrowserManager.LoadFromString]({{ site.url }}/docs/BrowserManager/LoadFromString/) | Загружает объект профиля браузера, сохраненный в строку.
 
 ***
 

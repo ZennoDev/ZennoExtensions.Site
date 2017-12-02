@@ -23,6 +23,11 @@
          href="{{ site.baseurl }}{{ site.sidebar_start_link }}">Подключение</a>
     </li>
     <li>
+      <a class="page-link {% if page.url == '/ExtensionMethods' %} active{% endif %}"
+         {% if page.url == '/ExtensionMethods' %}style="color: #00ccff"{% endif %}
+      href="{{ site.baseurl }}/ExtensionMethods">Методы расширения</a>
+    </li>
+    <li>
       <a class="page-link {% if page.url == '/AccountManager' %} active{% endif %}"
         {% if page.url == '/AccountManager' %}style="color: #00ccff"{% endif %}
         href="{{ site.baseurl }}/AccountManager">Менеджер аккаунтов</a>
@@ -30,17 +35,12 @@
     <li>
       <a class="page-link {% if page.url == '/BrowserManager' %} active{% endif %}"
         {% if page.url == '/BrowserManager' %}style="color: #00ccff"{% endif %}
-        href="{{ site.baseurl }}/BrowserManager">Настройка браузера</a>
+        href="{{ site.baseurl }}/BrowserManager">Менеджер браузера</a>
     </li>
     <li>
       <a class="page-link {% if page.url == '/MultiLogger' %} active{% endif %}"
          {% if page.url == '/MultiLogger' %}style="color: #00ccff"{% endif %}
          href="{{ site.baseurl }}/MultiLogger">Логирование</a>
-    </li>
-    <li>
-      <a class="page-link {% if page.url == '/ExtensionMethods' %} active{% endif %}"
-         {% if page.url == '/ExtensionMethods' %}style="color: #00ccff"{% endif %}
-         href="{{ site.baseurl }}/ExtensionMethods">Методы расширения</a>
     </li>
   </ul>
   <a class="page-link {% if page.url == site.sidebar_docs_link %} active{% endif %}"
@@ -53,9 +53,9 @@
          href="{{ site.baseurl }}{{ site.sidebar_docs_link }}#AccountManager">Менеджер аккаунтов</a>
     </li>
     <li>
-      <a class="page-link {% if page.url contains 'docs/Browser' %} active {% endif %}"
-         {% if page.url contains "docs/Browser" %}style="color: #00ccff"{% endif %}
-         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}#Browser">Настройка браузера</a>
+      <a class="page-link {% if page.url contains 'docs/BrowserManager' %} active {% endif %}"
+         {% if page.url contains "docs/BrowserManager" %}style="color: #00ccff"{% endif %}
+         href="{{ site.baseurl }}{{ site.sidebar_docs_link }}#BrowserManager">Настройка браузера</a>
     </li>
     <li>
       <a class="page-link {% if page.url == 'MultiLogger' %} active {% endif %}"

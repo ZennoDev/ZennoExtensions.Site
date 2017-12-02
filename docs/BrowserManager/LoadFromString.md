@@ -1,6 +1,6 @@
 ---
 layout: docsMember
-permalink: docs/Browser/LoadFromString/
+permalink: docs/BrowserManager/LoadFromString/
 
 categories:
     - Настройка браузера
