@@ -1,14 +1,14 @@
 ---
 layout: docsMember
-permalink: docs/HtmlElement/AttributeGet/
+permalink: docs/HtmlElement/GetAttr/
 
 categories:
     - Методы расширения HtmlElement
 
-title:          AttributeGet
+title:          GetAttr
 member:
     type:       method
-    name:       AttributeGet(System.String attrName)
+    name:       GetAttr(System.String attrName)
     summary:    'Получает значение атрибуа элемента.'
     returns:    'значение атрибута'
     params:

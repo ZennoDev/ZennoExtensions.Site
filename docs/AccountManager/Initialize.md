@@ -8,7 +8,7 @@ categories:
 title:          Initialize
 member:
     type:       method
-    name:       Initialize(System.String accountsPath,System.String configPath,System.String accountStringSeparator,System.Boolean removeObsoleteAccountsInConfig,ZennoExtensions.AccountManager.IConfig config)
+    name:       Initialize(System.String accountsPath,System.String configPath,System.String accountStringSeparator,System.Boolean removeObsoleteAccountsInConfig)
     summary:    'Производит инициализацию менеджера аккаунтов.
 Сопоставляет существующую конфигурацию аккаунтов или создает новую для файла с аккаунтами.'
     returns:    'Экземпляр AccountManager.'
@@ -21,8 +21,6 @@ member:
           value: 'Разделитель для строки аккаунта.'
         - name:  removeObsoleteAccountsInConfig
           value: 'Если true, то из конфигурации удаляются аккаунты, которых нет в файле аккаунтов.'
-        - name:  config
-          value: 'Конфигурация.'
 
 ---
 

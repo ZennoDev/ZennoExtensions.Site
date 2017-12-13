@@ -34,7 +34,7 @@ permalink: /docs
 ***
 
 <a name="BrowserManager"></a>
-## Настройка браузера
+## Менеджер браузера
 Гибкая генерация свойств навигатора, UserAgent'а, отпечатков и множества других параметров.
 
 Метод | Описание
@@ -55,9 +55,13 @@ permalink: /docs
 ------------ | -------------
 [GetInstance]({{ site.url }}/docs/MultiLogger/GetInstance/) | Возвращает экземпляр класса MultiLogger.
 [MultiLog]({{ site.url }}/docs/MultiLogger/MultiLog/) | Логирование через набор логгеров, установленных через свойство LogTo.
+[MultiLogDebug]({{ site.url }}/docs/MultiLogger/MultiLogDebug/) | Логирование в режиме Debug через набор логгеров, установленных через свойство LogTo.
 [LogToProjectMaker]({{ site.url }}/docs/MultiLogger/LogToProjectMaker/) | Вывод сообщения в лог ProjectMaker.Обертка над методами project.Send***ToLog.
+[LogToProjectMakerDebug]({{ site.url }}/docs/MultiLogger/LogToProjectMakerDebug/) | Вывод сообщения в лог ProjectMaker в режиме Debug.Обертка над методами project.Send***ToLog.
 [LogToFile]({{ site.url }}/docs/MultiLogger/LogToFile/) | Логирование в файл.
+[LogToFileDebug]({{ site.url }}/docs/MultiLogger/LogToFileDebug/) | Логирование в файл в режиме Debug.
 [LogByCustom]({{ site.url }}/docs/MultiLogger/LogByCustom/) | Логирование через набор пользовательских логгеров, установленных в свойстве CustomLoggers.
+[LogByCustomDebug]({{ site.url }}/docs/MultiLogger/LogByCustomDebug/) | Логирование в режиме Debug через набор пользовательских логгеров, установленных в свойстве CustomLoggers.
 
 ***
 

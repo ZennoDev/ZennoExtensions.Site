@@ -9,10 +9,13 @@ BrowserManager предоставляет возможность генерир�
 
 ***
 
-Функционал настройки браузера находится в пространстве имен `ZennoExtensions.Browser`.  
-Для использования подключите пространство имен:
+Функционал настройки браузера находится в пространстве имен `ZennoExtensions.BrowserManager`.  
+Для использования подключите пространства имен:
 ```csharp
-using ZennoExtensions.Browser;
+using ZennoExtensions.BrowserManager;
+using ZennoExtensions.BrowserManager.Model;
+using ZennoExtensions.BrowserManager.Model.Filters;
+using ZennoExtensions.BrowserManager.Generation.Rules;
 ```
 
 ***
@@ -40,16 +43,13 @@ using ZennoExtensions.Browser;
 
 ## Генерация
 
-Для генерации профиля браузера необхдимо вызвать метод `BrowserManager.Generate()`, который принимает 1 необязательный параметр - правила генерации.
+Для генерации профиля браузера необхдимо вызвать метод `BrowserManager.Generate(generationRules)`, который принимает 1 необязательный параметр - правила генерации.
 
 ```csharp
 var profile = BrowserManager.Generate();
 ```
 
-Вы можете настроить как именно производить генерацию, передав объект правил в метод `Generate`.  
-> Для настройки правил подключите пространства имен:  
-  `using ZennoExtensions.Browser.Generation.Rules;`  
-  `using ZennoExtensions.Browser.Model.Filters;`
+Вы можете настроить как именно производить генерацию, передав объект правил в метод `Generate`:
 
 ```csharp
 var rules = new GenerationRules();
@@ -82,13 +82,13 @@ BrowserManager.Setup(profile, instance, project);
 
 ```csharp
 // Сохраняем в файл
-string path = "C:\\1.xml";
+string path = "C:\\1.json";
 BrowserManager.Save(profile, instance, path);
 ```
 
 Для повторного использования нужно загрузить и снова применить профиль:
 ```csharp
-string path = "C:\\1.xml";
+string path = "C:\\1.json";
 var profile = BrowserManager.Load(path);
 BrowserManager.Setup(profile, instance, project);
 ```

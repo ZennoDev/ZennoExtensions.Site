@@ -1,14 +1,14 @@
 ---
 layout: docsMember
-permalink: docs/HtmlElement/ValueSet/
+permalink: docs/HtmlElement/SetVal/
 
 categories:
     - Методы расширения HtmlElement
 
-title:          ValueSet
+title:          SetVal
 member:
     type:       method
-    name:       ValueSet(System.String value,ZennoExtensions.Enums.Emulation emulation,System.Boolean useSelectedItems)
+    name:       SetVal(System.String value,ZennoExtensions.Enums.Emulation emulation,System.Boolean useSelectedItems)
     summary:    'Устанавливает значение элемента.'
     returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
     params:

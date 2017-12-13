@@ -1,15 +1,15 @@
 ---
 layout: docsMember
-permalink: docs/MultiLogger/LogToProjectMaker/
+permalink: docs/MultiLogger/LogToProjectMakerDebug/
 
 categories:
     - Мультилогер
 
-title:          LogToProjectMaker
+title:          LogToProjectMakerDebug
 member:
     type:       method
-    name:       LogToProjectMaker(System.String message,System.Boolean logToZennoPoster,ZennoExtensions.Enums.MessageType messageType)
-    summary:    'Вывод сообщения в лог ProjectMaker.
+    name:       LogToProjectMakerDebug(System.String message,System.Boolean logToZennoPoster,ZennoExtensions.Enums.MessageType messageType)
+    summary:    'Вывод сообщения в лог ProjectMaker в режиме Debug.
 Обертка над методами project.Send***ToLog.'
     returns:    'void'
     params:

@@ -1,15 +1,15 @@
 ---
 layout: docsMember
-permalink: docs/MultiLogger/LogToFile/
+permalink: docs/MultiLogger/LogToFileDebug/
 
 categories:
     - Мультилогер
 
-title:          LogToFile
+title:          LogToFileDebug
 member:
     type:       method
-    name:       LogToFile(System.String message,ZennoExtensions.Enums.MessageType messageType)
-    summary:    'Логирование в файл.'
+    name:       LogToFileDebug(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    summary:    'Логирование в файл в режиме Debug.'
     returns:    'void'
     params:
         - name:  message

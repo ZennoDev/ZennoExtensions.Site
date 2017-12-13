@@ -8,13 +8,13 @@ categories:
 title:          MultiLog
 member:
     type:       method
-    name:       MultiLog(System.String message,ZennoExtensions.Enums.MessageType messageTypeType)
+    name:       MultiLog(System.String message,ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование через набор логгеров, установленных через свойство LogTo.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
-        - name:  messageTypeType
+        - name:  messageType
           value: 'Тип сообщения. Не обязательный параметр, по умолчанию MessageType.Info.'
 
 ---

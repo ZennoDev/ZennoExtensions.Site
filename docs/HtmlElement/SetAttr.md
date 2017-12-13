@@ -1,14 +1,14 @@
 ---
 layout: docsMember
-permalink: docs/HtmlElement/AttributeSet/
+permalink: docs/HtmlElement/SetAttr/
 
 categories:
     - Методы расширения HtmlElement
 
-title:          AttributeSet
+title:          SetAttr
 member:
     type:       method
-    name:       AttributeSet(System.String attrName,System.String attrValue)
+    name:       SetAttr(System.String attrName,System.String attrValue)
     summary:    'Устанавливает значение атрибуа элемента.'
     returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
     params:

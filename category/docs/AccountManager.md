@@ -1,5 +1,5 @@
 ---
 layout: category
 title: Менеджер аккаунтов
-permalink: /docs#AccountManager
+permalink: docs#AccountManager/
 ---

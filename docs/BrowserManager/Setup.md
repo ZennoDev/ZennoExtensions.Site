@@ -8,7 +8,7 @@ categories:
 title:          Setup
 member:
     type:       method
-    name:       Setup(ZennoExtensions.Browser.Model.Profile profile,ZennoLab.CommandCenter.Instance instance,ZennoLab.InterfacesLibrary.ProjectModel.IZennoPosterProjectModel project)
+    name:       Setup(ZennoExtensions.BrowserManager.Model.Profile profile,ZennoLab.CommandCenter.Instance instance,ZennoLab.InterfacesLibrary.ProjectModel.IZennoPosterProjectModel project)
     summary:    'Применяет конфигурацию к ZennoPoster&lsquo;y.'
     returns:    'void'
     params:

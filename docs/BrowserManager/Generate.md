@@ -8,7 +8,7 @@ categories:
 title:          Generate
 member:
     type:       method
-    name:       Generate(ZennoExtensions.Browser.Generation.Rules.GenerationRules generationRules)
+    name:       Generate(ZennoExtensions.BrowserManager.GenerationRules generationRules)
     summary:    'Генерация профиля браузера.'
     returns:    'Заполненый профиль браузера.'
     params:

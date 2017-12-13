@@ -54,10 +54,10 @@ string accountsPath = project.Variables["AccountsPath"]
 
 Также есть возможность указать свой метод, который будет вызываться прежде, чем метод `ThrowIfXXX` выбросит исключение. Это можно использовать при логировании.
  
-Для этого нужно задать статическое свойство `InvokeBeforeExceptionThrowing` класса `Settings`. Метод принимает параметр типа `ExceptionArgs`, которые содержит имя метода, который намерен выбросить исключение, сообщение исключения и переменную, которая не прошла проверку.
+Для этого нужно задать статическое свойство `InvokeBeforeException` класса `Throw`. Метод принимает параметр типа `ExceptionArgs`, содержащий имя метода, который намерен выбросить исключение, сообщение исключения и переменную, которая не прошла проверку.
 
 ```csharp
-Settings.InvokeBeforeExceptionThrowing = args =>
+Throw.InvokeBeforeException = args =>
 {
     string logMessage = "При проверке переменной " + ((ILocalVariable)args.Variable).Name + " в методе " +
                         args.MethodName + "было выброшено исключение с сообщением " + args.Message;
@@ -101,7 +101,7 @@ if(tab.IsBusy)
 - `WaitFor(string tags, string attrName, string attrValue, string searchKind,int number, int timeout)` выполняет ожидание, пока на странице не будет найден Html-элемент по указанном атрибутам, либо до истечения таймаута.
 - `WaitFor(Func<bool> predicate, int timeout)` выполняет ожидание, пока предикат не вернет `true`, либо до истечения таймаута.
 
-Эти методы удобны в использовании при динамическом изменении страницы, когда нужно дождаться появления элемента. 
+Эти методы удобны в использовании при динамическом изменении страницы, когда нужно дождаться появления, исчезновения или изменения элемента. 
 
 ***
 
@@ -115,8 +115,8 @@ instance.ActiveTab.GetElementByXpath("//input")
                   .ScrollTo()
                   .Rise(Event.Focus) 
                   .ClickOn()                              
-                  .AttributeSet("value", "Lorem ipsum")
-                  .AttributeGet("value");
+                  .SetAttr("value", "Lorem ipsum")
+                  .GetAttr("value");
 ```
 
 Как видите, здесь также, как и в локальных переменных, присутствует метод `ThrowIfXXX`.

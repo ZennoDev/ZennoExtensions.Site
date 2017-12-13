@@ -10,10 +10,10 @@ member:
     type:       method
     name:       ToArray(System.Char separator)
     summary:    'Разбивает строковое значение переменной на массив значений.'
-    returns:    'Массив строковых значений'
+    returns:    'Массив строковых значений.'
     params:
         - name:  separator
-          value: 'Разделитель'
+          value: 'Разделитель.'
 
 ---
 

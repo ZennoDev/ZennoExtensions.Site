@@ -4,23 +4,55 @@ title: Работа с менеджером аккаунтов
 permalink: /AccountManager
 ---
 
-Менеджер аккаунтов предоставляет функционал многопоточной работы со списком аккаунтов. 
+Менеджер аккаунтов предоставляет функционал многопоточной работы со списком аккаунтов.  
+Функционал менеджера аккаунтов находится в пространстве имен `ZennoExtensions.AccountManager`.  
 
 ***
 
-Функционал менеджера аккаунтов находится в пространстве имен `ZennoExtensions.AccountManager`.  
-Для использования подключите пространство имен:
+Для использования подключите пространства имен:
 ```csharp
+using System.Xml; // необходимо также подключить сборку
 using ZennoExtensions.AccountManager;
 ```
+
+***
+
+Основные требования для менеджера аккаунтов:
+
++ Файл аккаунтов не должен изменяться
++ Каждый аккаунт должен выполняться только в одном потоке в один момент времени
++ Аккаунты должны использоваться по очереди, не зависимо от количества потоков
++ Должна быть возможность привязывать к аккаунту прокси или любые другие данные
+
+Принцип работы менеджера аккаунтов:
+
++ Для файла аккунтов создается свой файл конфигурации, в котором хранятся все необходимые данные:
+    + Служебный идентификатор аккаунта (используется менеджером аккаунта для внутреннего механизма определения аккаунта)
+    + Логин с паролем
+    + Время использования аккаунта `LastExecution`
+    + Информация о блокировке выполнения другими потоками `IsBusy`
+    + Порядковый номер выполнения `Order` - чтобы аккаунты использовались по очереди
+    + Настройка `IsMissed`, позволяющая вручную пропускать выполнение выбранных аккаунтов
+    + Пользовательские данные `Data`
++ При получении аккаунта выполняется поиск по конфигурации, учитывающий следующие атрибуты:
+    + `Order` - берется аккаунт с минимальным порядковым номером
+    + `IsBusy` - аккаунт не занят другими потоками
+    + `IsMissed` - не указано, что аккаунт нужно пропускать
++ После того как аккаунт был найден, в файле конфигурации обновляются данные:
+    + Записывается текущее время `LastExecution`
+    + Порядковый номер `Order` становится максимальным из всех аккаунтов
+    + Аккаунт помечается занятым `IsBusy="true"`
++ После завершения работы с аккаунтом выполняется его освобождение:
+    + Записывается текущее время `LastExecution`
+    + Аккаунт помечается свободным `IsBusy="false"`
 
 ***
 
 ## Инициализация
 
 Чтобы приступить к работе с менеджером аккаунтов нужно обратиться к статическому методу `AccountManager.GetInstance()`, который вернет единственный для всех потоков экземпляр менеджера.
- 
-Затем нужно инициализировать экземпляр менеджера вызвав метод `Initialize` и указав путь к файлу с аккаунтами и путь до файла конфигурации аккаунтов.
+
+Затем нужно инициализировать экземпляр менеджера вызвав метод `Initialize`, указав путь к файлу с аккаунтами и путь до файла конфигурации аккаунтов.
 
 ```csharp
 string accountsPath = @"C:\accounts.txt";
@@ -37,16 +69,25 @@ manager.Initialize(accountsPath, configPath);
 ```xml
 <?xml version="1.0"?>
 <Accounts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Account Id="1" Login="user1" Password="pass" Order="135" IsBusy="false" IsBanned="false" LastExecution="16-11-2017 10:35:38" />
-  <Account Id="3" Login="user3" Password="pass" Order="131" IsBusy="false" IsBanned="false" LastExecution="16-11-2017 10:35:37" />
-  <Account Id="7" Login="user2" Password="pass" Order="132" IsBusy="false" IsBanned="false" LastExecution="16-11-2017 10:35:38" />
+  <Account Id="1" Login="user1" Password="pass" Order="135" IsBusy="false" IsMissed="false" LastExecution="16-11-2017 10:35:38">
+    <Data>
+        <Item key="proxy" value="login:password@123.123.123.123:1010" />
+    </Data>
+  </Account>
+  <Account Id="3" Login="user3" Password="pass" Order="131" IsBusy="false" IsMissed="false" LastExecution="16-11-2017 10:35:37">
+    <Data />
+  </Account>
+  <Account Id="7" Login="user2" Password="pass" Order="132" IsBusy="false" IsMissed="false" LastExecution="16-11-2017 10:35:38">
+    <Data />
+  </Account>
 </Accounts>
 ```
 
 + Свойство `Order` показывает приоритет аккаунта для работы. Чем меньше его номер, тем скорее он вступит в работу. После того, как аккаунт закончит работу ему присваивается максимальный `Order` среди существующих аккаунтов. Таким образом работа между всеми аккаунтами распределяется равномерно, даже если пользователь добавил новые аккаунты в файл во время выполнения шаблона.
 + Свойство `IsBusy` показывает находится ли данный аккаунт сейчас в работе. 
-+ Свойство `IsBanned` показывает можно ли вообще брать данный аккаунт для работы. Вы можете устанавливать это свойство из кода или же пользователь может редактировать конфигурацию. 
++ Свойство `IsMissed` показывает можно ли вообще брать данный аккаунт для работы. Пользователь может редактировать конфигурацию и устанавливать это поле самостоятельно. 
 + Свойство `LastExecution` показывает когда в последний раз данный аккаунт находился в работе.
++ Свойство `Data` содержит словарь пользовательских данных. Все данные, которые нужно привязать к аккаунту, следует помещать в этот словарь.
 
 ***
 
@@ -54,23 +95,23 @@ manager.Initialize(accountsPath, configPath);
 
 После того как инициализация менеджера аккаунтов произведена можно вызывать методы, которые возвращают аккаунты:
 
-- `GetFreeAccountWithMinExecutionsCount(bool throwExceptionIfNoFreeAccounts = false)` — возвращает свободный и незабаненный аккаунт с минимальным количеством запусков, т.е. с минимальным значением свойства `Order`. Если свободных аккаунтов нет, то вернется `null`. В параметры метода можно передать `true`, тогда в случае отсутствия свободных аккаунтов будет генерироваться исключение.
+- `GetFreeAccountWithMinExecutionsCount(bool throwExceptionIfNoFreeAccounts = false)` — возвращает свободный `IsBusy="false"` и незаблокированный `IsMissed="false"` аккаунт с минимальным количеством запусков, т.е. с минимальным значением свойства `Order`. Если свободных аккаунтов нет, то вернется `null`. В параметры метода можно передать `true`, тогда в случае отсутствия свободных аккаунтов будет генерироваться исключение.
     ```csharp
     var account = manager.GetFreeAccountWithMinExecutionsCount();
     
     if (account == null)
-        project.SendInfoToLog("Все аккаунты заняты", true); 
+        Throw.Exception("Все аккаунты заняты");
     
     project.SendInfoToLog("Логин: " + account.Login, true); 
     project.SendInfoToLog("Пароль: " + account.Password, true); 
     ```
 - `GetAccount(Predicate<Account> predicate)` — возвращает аккаунт, удовлетворяющий предикату.  
-Например, можно получить свободный и незабаненный аккаунт, который не был в работе более 12-и часов:
+Например, можно получить свободный и незаблокированный аккаунт, который не был в работе более 12-и часов:
     ```csharp
     var account = manager.GetAccount(
-        account => !account.IsBusy 
-                && !account.IsBanned 
-                && DateTime.Now - account.LastExecution > TimeSpan.FromHours(12)); 
+            acc => !acc.IsBusy 
+                    && !acc.IsBanned 
+                    && DateTime.Now - acc.LastExecution > TimeSpan.FromHours(12)); 
     ```
     
 ***
@@ -107,37 +148,92 @@ string accountsPath = @"C:\accounts.txt";
 string configPath = accountsPath + ".config.xml";
 var manager = AccountManager.GetInstance();
 manager.Initialize(accountsPath, configPath);
-manager.ReleaseAccounts(account => !account.IsBusy                                                   
-                                   && DateTime.Now - account.LastExecution > TimeSpan.FromHours(1)); 
+manager.ReleaseAccounts(acc => account.IsBusy                                                   
+                               && DateTime.Now - acc.LastExecution > TimeSpan.FromHours(1)); 
+```
+
+***
+
+## Назначение прокси
+
+Прокси необходимо назначать после того как был получен аккаунт.
+Для работы с прокси на объекте аккаунта доступны 2 метода:
+
++ `GetProxy()` - возращает прокси, используемый аккаунтом, либо `null`, если прокси еще не назначался аккаунту
++ `SetProxy(string proxyString, int maxAccountsWithSameProxy)` - пробует назначить аккаунту прокси, в случае успешного назначения возвращает `true`, иначе `false`.
+    + proxyString - строка, содержащая прокси
+    + maxAccountsWithSameProxy - количество аккаунтов, которые могут использовать переданный прокси. Если прокси уже используется указанным количеством аккаунтов, прокси не будет назначен и метод вернет `false`
+
+Устанавливаемый прокси помещается в словарь `Data["proxy"]`.
+
+Рассмотрим пример:
+
+```csharp
+string proxy = account.GetProxy();
+
+// Если у аккаунта еще нет прокси, ищем новый
+if (string.IsNullOrWhiteSpace(proxy))
+{
+    int proxyLimit = project.Variables["ProxyLimit"].ToInt();
+    string[] proxyArray = File.ReadAllLines(project.Variables["ProxyPath"].Value);
+    
+    foreach(var item in proxyArray)
+    {
+        if (account.SetProxy(item, proxyLimit)) // Пробуем установить прокси в соответствии с лимитами
+        {
+            proxy = item;
+            break;
+        }
+    }
+    
+    if (string.IsNullOrWhiteSpace(proxy))
+    {
+        account.Release();
+        Throw.Exception("Нет свободных прокси. Добавьте новые или увеличте лимит аккаунтов на 1 прокси.");
+    }
+}
+
+try
+{
+    // Устанавливает прокси в инстансе
+    instance.SetProxy(proxy);
+    logger.MultiLog("Подключили прокси: " + proxy);
+}
+catch
+{
+    account.Release();
+    Throw.Exception("Не верный формат прокси: " + proxy);
+}
 ```
 
 ***
 
 ## Закрепление данных за аккаунтом
 
-Чтобы закрепить прокси за аккаунтом достаточно указать экземпляр прокси и после того, как конфигурация будет сохранена после вызова метода `account.Release()` (или `account.SaveChanges()`, который обновляет данные аккаунта в конфигурации) в файле аккаунта за аккаунтом закрепятся новые данные.
+Помимо прокси вы можете закреплять любые другие данные. Для этого у аккаунта есть свойство `Dictionary<strins, string> Data`, доступное для изменения.
 
-Пример:
+Например сохраним информацию о блокировке аккаунта:
 
 ```csharp
-var freeAccount = manager.GetFreeAccountWithMinExecutionsCount();
-freeAccount.Proxy = new Proxy
-{
-    Ip = "127.0.0.1",
-    Port = 80,
-    Scheme = "socks5"
-}; 
+// Добавляем данные в аккаунт, чтобы сохранить информацию о блокировке в файле конфигурации
+account.Data["Banned"] = "True";
+account.Data["BannedInfo"] = "Причина блокировки";
+account.Data["CanRecover"] = "False"; // Можно ли восстановить аккаунт
 
-freeAccount.SaveChanges(); // Сохраняем изменения в аккаунте.
+account.SaveChanges(); // Обновляем файл конфигурации.
 ```
 
-После выполнения этого кода за аккаунтом закрепится прокси:
+После выполнения этого кода информация будет добавлена к аккаунту:
 
 ```xml
 <Account Id="3" Login="user3" Password="password"
-         Order="136" IsBusy="false" IsBanned="false" LastExecution="28-11-2017 15:33:48">
-    <Proxy Ip="127.0.0.1" Port="80" Scheme="socks5" />
+         Order="136" IsBusy="false" IsMissed="false" LastExecution="28-11-2017 15:33:48">
+    <Data>
+        <Item key="Banned" value="True" />
+        <Item key="BannedInfo" value="Причина блокировки" />
+        <Item key="CanRecover" value="False" />
+    </Data>
 </Account>
 ```
 
-Таким образом вы можете закреплять за аккаунтами и свои данные. Достаточно добавить новые свойства, которые будут представлять ваши данные,  в клаcc `Account`. 
+Таким образом вы можете закреплять за аккаунтами и свои данные. Достаточно добавить их в словарь `Data`.

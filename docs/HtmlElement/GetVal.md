@@ -1,14 +1,14 @@
 ---
 layout: docsMember
-permalink: docs/HtmlElement/ValueGet/
+permalink: docs/HtmlElement/GetVal/
 
 categories:
     - Методы расширения HtmlElement
 
-title:          ValueGet
+title:          GetVal
 member:
     type:       method
-    name:       ValueGet()
+    name:       GetVal()
     summary:    'Возвращает значение элемента. Обертка над GetValue();'
     returns:    'значение элемента'
     params:
