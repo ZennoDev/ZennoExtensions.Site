@@ -1,8 +1,8 @@
 # Main
 title:            ZennoExtensions
 description:      'Библиотека для <a href="http://zennolab.com/ru/products/zennoposter/" target="_blank">ZennoPoster</a>'
-url:              "zennoextensions.ru"
-baseurl:          "zennoextensions.ru"
+url:              "http://zennoextensions.ru"
+baseurl:          "http://zennoextensions.ru"
 
 # Settings
 markdown:         kramdown
