@@ -182,7 +182,7 @@ if (string.IsNullOrWhiteSpace(proxy))
     if (string.IsNullOrWhiteSpace(proxy))
     {
         account.Release();
-        Throw.Exception("Нет свободных прокси. Добавьте новые или увеличте лимит аккаунтов на 1 прокси.");
+        Throw.Exception("Нет свободных прокси.");
     }
 }
 
