@@ -10,7 +10,6 @@ highlighter:      rouge
 
 plugins:
                   - jekyll-feed
-                  - jekyll-redirect-from
 
 # Sidebar
 sidebar_start_link:   '/start'
