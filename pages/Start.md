@@ -26,6 +26,9 @@ permalink: /start
 2. Откройте блок ссылок и укажите `.dll` файл библиотеки:
     
     ![](https://pp.userapi.com/c841324/v841324369/450e8/UBIt7n8z5Pg.jpg)
+3. Добавьте также сборки
+    + System.Xml
+    + System.Runtime.Serialization
 
 ***
 
@@ -36,3 +39,7 @@ permalink: /start
 2. Для добавления директив using откройте блок и укажите нужные:
     
     ![](https://pp.userapi.com/c841324/v841324369/450f9/aaSA86jnQYw.jpg)
+    
+    Укажите также ссылки на добавленные выше сборки
+    + using System.Xml;
+    + using System.Runtime.Serialization;
