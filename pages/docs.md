@@ -148,10 +148,10 @@ permalink: /docs
 [element.IsHidden]({{ site.url }}/docs/HtmlElement/IsHidden/) | Проверяет скрыт ли элемент.
 [element.Rise]({{ site.url }}/docs/HtmlElement/Rise/) | Выполняет событие для элемента.
 [element.ClickOn]({{ site.url }}/docs/HtmlElement/ClickOn/) | Выполняет клик по элементу.
-[element.AttributeSet]({{ site.url }}/docs/HtmlElement/AttributeSet/) | Устанавливает значение атрибуа элемента.
-[element.AttributeGet]({{ site.url }}/docs/HtmlElement/AttributeGet/) | Получает значение атрибуа элемента.
-[element.ValueSet]({{ site.url }}/docs/HtmlElement/ValueSet/) | Устанавливает значение элемента.
-[element.ValueGet]({{ site.url }}/docs/HtmlElement/ValueGet/) | Возвращает значение элемента. Обертка над GetValue();
+[element.SetAttr]({{ site.url }}/docs/HtmlElement/SetAttr/) | Устанавливает значение атрибуа элемента.
+[element.GetAttr]({{ site.url }}/docs/HtmlElement/GetAttr/) | Получает значение атрибуа элемента.
+[element.SetVal]({{ site.url }}/docs/HtmlElement/SetVal/) | Устанавливает значение элемента.
+[element.GetVal]({{ site.url }}/docs/HtmlElement/GetVal/) | Возвращает значение элемента. Обертка над GetValue();
 [element.ScrollTo]({{ site.url }}/docs/HtmlElement/ScrollTo/) | Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().
 [element.ThrowIfNull]({{ site.url }}/docs/HtmlElement/ThrowIfNull/) | Бросает исключение, если элемент пуст (свойство IsVoid возвращает true).
 [element.ThrowIfHidden]({{ site.url }}/docs/HtmlElement/ThrowIfHidden/) | Бросает исключение, если елемент скрыт.
