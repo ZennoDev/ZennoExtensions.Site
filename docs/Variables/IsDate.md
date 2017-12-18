@@ -16,7 +16,7 @@ member:
 ---
 
 ```csharp
-project.Variables["temp"].Value = "True";
+project.Variables["temp"].Value = "11.11.2011";
 if (project.Variables["temp"].IsDate())
 {
     project.SendInfoToLog("Значение переменной temp является датой.", true);     

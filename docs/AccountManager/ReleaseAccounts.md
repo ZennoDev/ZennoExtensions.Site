@@ -22,7 +22,7 @@ string accountsPath = @"C:\accounts.txt";
 string configPath = accountsPath + ".config.xml";
 var manager = AccountManager.GetInstance();
 manager.Initialize(accountsPath, configPath);
-manager.ReleaseAccounts(account =&gt;
-!account.IsBusy   
-&amp;&amp; DateTime.Now - account.LastExecution &gt; TimeSpan.FromHours(1));
+manager.ReleaseAccounts(acc =>
+    !acc.IsBusy   
+    && DateTime.Now - acc.LastExecution > TimeSpan.FromHours(1));
 ```

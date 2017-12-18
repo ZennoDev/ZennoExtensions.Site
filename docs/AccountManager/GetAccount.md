@@ -23,7 +23,7 @@ member:
 
 ```csharp
 var account = manager.GetAccount(
-account =&gt; !account.IsBusy 
-&amp;&amp; !account.IsMissed 
-&amp;&amp; DateTime.Now - account.LastExecution &gt; TimeSpan.FromHours(12));
+    acc => !acc.IsBusy 
+           && !acc.IsMissed 
+           && DateTime.Now - acc.LastExecution > TimeSpan.FromHours(12));
 ```

@@ -24,5 +24,5 @@ member:
 
 ```csharp
 var logger = project.GetLogger();
-logger.LogToProjectMaker("Тестовая запись в лог");
+logger.LogToProjectMakerDebug("Тестовая запись в лог");
 ```
