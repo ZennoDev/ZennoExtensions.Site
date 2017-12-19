@@ -19,3 +19,7 @@ member:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a");
+```

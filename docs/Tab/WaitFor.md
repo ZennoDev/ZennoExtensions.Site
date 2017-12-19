@@ -8,9 +8,9 @@ categories:
 title:          WaitFor
 member:
     type:       method
-    name:       WaitFor(System.Func{System.Boolean} predicate,System.Int32 timeout)
+    name:       WaitFor(Func<bool> predicate, int timeout)
     summary:    'Выполняет ожидание, пока предикат не вернет true, либо до истечения таймаута.'
-    returns:    'Тот же объект <see cref="T:ZennoLab.CommandCenter.Tab" />для Fluent Interface'
+    returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
     params:
         - name:  predicate
           value: 'Условное выражение.'
@@ -19,3 +19,18 @@ member:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+
+// Кнопка, открвающая окно попапа
+Func<HtmlElement> EditProfileBtn = () => tab.GetElementByXpath("//a[contains(@hrefattrs,'EditUserProfile')]");
+// Окно
+Func<HtmlElement> EditProfilePopup = () => tab.GetElementByXpath("//div[contains(@id,'EditUser')]");
+
+EditProfileBtn().Click();
+
+// Ожидаем появления попапа 10 секунд
+tab.WaitFor(() => !EditProfilePopup().IsHidden(), 10000);
+```
+
+Этот метод удобен в использовании при динамическом изменении страницы, когда нужно дождаться появления, исчезновения или изменения элемента.
