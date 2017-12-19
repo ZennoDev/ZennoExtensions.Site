@@ -8,7 +8,7 @@ categories:
 title:          WaitFor
 member:
     type:       method
-    name:       WaitFor(Func<bool> predicate, int timeout)
+    name:       WaitFor(Func&lt;bool&gt; predicate, int timeout)
     summary:    'Выполняет ожидание, пока предикат не вернет true, либо до истечения таймаута.'
     returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
     params:
