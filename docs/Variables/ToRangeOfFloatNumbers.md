@@ -8,7 +8,7 @@ categories:
 title:          ToRangeOfFloatNumbers
 member:
     type:       method
-    name:       ToRangeOfFloatNumbers(System.Char separator)
+    name:       ToRangeOfFloatNumbers(char separator)
     summary:    'Конвертирует строковое значение переменной в диапазон вещественных чисел.'
     returns:    'Диапазон вещественных чисел.'
     params:

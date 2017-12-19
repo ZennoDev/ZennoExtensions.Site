@@ -9,9 +9,13 @@ title:          GetVal
 member:
     type:       method
     name:       GetVal()
-    summary:    'Возвращает значение элемента. Обертка над GetValue();'
-    returns:    'значение элемента'
+    summary:    'Возвращает значение элемента. Обертка над GetValue().'
+    returns:    'Значение элемента'
     params:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var value = tab.GetElementByXpath("//a").GetVal();
+```

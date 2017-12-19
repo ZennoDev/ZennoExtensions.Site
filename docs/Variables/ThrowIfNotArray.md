@@ -8,14 +8,14 @@ categories:
 title:          ThrowIfNotArray
 member:
     type:       method
-    name:       ThrowIfNotArray(System.String separator,System.Char exceptionMessage)
+    name:       ThrowIfNotArray(string exceptionMessage, char separator)
     summary:    'Бросает исключение, если значение переменной не является массивом данных.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
-        - name:  separator
-          value: 'Разделитель'
         - name:  exceptionMessage
           value: 'Сообщение исключения.'
+        - name:  separator
+          value: 'Разделитель'
 
 ---
 

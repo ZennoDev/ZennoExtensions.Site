@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfEmpty
 member:
     type:       method
-    name:       ThrowIfEmpty(System.String exceptionMessage)
+    name:       ThrowIfEmpty(string exceptionMessage)
     summary:    'Бросает исключение, если переменная пустая.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'

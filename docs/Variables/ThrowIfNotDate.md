@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfNotDate
 member:
     type:       method
-    name:       ThrowIfNotDate(System.String exceptionMessage)
+    name:       ThrowIfNotDate(string exceptionMessage)
     summary:    'Бросает исключение, если значение переменной не является датой.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'

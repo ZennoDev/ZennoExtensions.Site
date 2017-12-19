@@ -8,7 +8,7 @@ categories:
 title:          LogToProjectMakerDebug
 member:
     type:       method
-    name:       LogToProjectMakerDebug(System.String message,System.Boolean logToZennoPoster,ZennoExtensions.Enums.MessageType messageType)
+    name:       LogToProjectMakerDebug(string message, bool logToZennoPoster,ZennoExtensions.Enums.MessageType messageType)
     summary:    'Вывод сообщения в лог ProjectMaker в режиме Debug.
 Обертка над методами project.Send***ToLog.'
     returns:    'void'
@@ -18,7 +18,7 @@ member:
         - name:  logToZennoPoster
           value: 'Выводить ли сообщение в ZennoPoster&lsquo;e.'
         - name:  messageType
-          value: 'Тип сообщения.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

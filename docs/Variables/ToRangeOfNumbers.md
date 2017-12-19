@@ -8,7 +8,7 @@ categories:
 title:          ToRangeOfNumbers
 member:
     type:       method
-    name:       ToRangeOfNumbers(System.Char separator)
+    name:       ToRangeOfNumbers(char separator)
     summary:    'Конвертирует строковое значение переменной в диапазон целых чисел.'
     returns:    'Диапазон целых чисел.'
     params:

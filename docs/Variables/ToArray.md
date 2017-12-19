@@ -8,7 +8,7 @@ categories:
 title:          ToArray
 member:
     type:       method
-    name:       ToArray(System.Char separator)
+    name:       ToArray(char separator)
     summary:    'Разбивает строковое значение переменной на массив значений.'
     returns:    'Массив строковых значений.'
     params:

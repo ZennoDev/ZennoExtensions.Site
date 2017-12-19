@@ -10,8 +10,12 @@ member:
     type:       method
     name:       UnixTimeToDateTime()
     summary:    'Конвертирует число представляющее UnixTime в соответствующую дату в формате DateTime.'
-    returns:    'структуру <see cref="T:System.DateTime" />'
+    returns:    'Структура DateTime.'
     params:
 
 ---
 
+```csharp
+int unixTime = 1513120110;
+DateTime date = unixTime.UnixTimeToDateTime(); // 12.12.2017
+```

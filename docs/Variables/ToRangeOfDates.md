@@ -8,7 +8,7 @@ categories:
 title:          ToRangeOfDates
 member:
     type:       method
-    name:       ToRangeOfDates(System.Char separator)
+    name:       ToRangeOfDates(char separator)
     summary:    'Конвертирует строковое значение переменной в диапазон дат.'
     returns:    'Диапазон дат.'
     params:

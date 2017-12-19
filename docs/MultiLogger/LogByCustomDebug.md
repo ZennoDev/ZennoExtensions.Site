@@ -8,14 +8,14 @@ categories:
 title:          LogByCustomDebug
 member:
     type:       method
-    name:       LogByCustomDebug(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    name:       LogByCustomDebug(string message, ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование в режиме Debug через набор пользовательских логгеров, установленных в свойстве CustomLoggers.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
         - name:  messageType
-          value: 'Тип сообщения.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

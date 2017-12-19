@@ -10,7 +10,7 @@ member:
     type:       method
     name:       Refresh()
     summary:    'Выполняет обновление текущей страницы.'
-    returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
+    returns:    'Тот же экземпляр Tab для множественных вызовов (Fluent Interface).'
     params:
 
 ---

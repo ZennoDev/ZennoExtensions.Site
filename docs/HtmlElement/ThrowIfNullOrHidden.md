@@ -8,12 +8,17 @@ categories:
 title:          ThrowIfNullOrHidden
 member:
     type:       method
-    name:       ThrowIfNullOrHidden(System.String exceptionMessage)
+    name:       ThrowIfNullOrHidden(string exceptionMessage)
     summary:    'Бросает исключение, если елемент пуст (свойство IsVoid возвращает true) или скрыт.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
+    returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a");
+linkElement.ThrowIfNullOrHidden("Элемент не найден.");
+```

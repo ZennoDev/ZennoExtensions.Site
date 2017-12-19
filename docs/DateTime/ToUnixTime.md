@@ -15,3 +15,7 @@ member:
 
 ---
 
+```csharp
+DateTime date = new DateTime(2017, 12, 12);
+int unixTime = date.ToUnixTime();
+```

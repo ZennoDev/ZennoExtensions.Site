@@ -8,9 +8,9 @@ categories:
 title:          SetVal
 member:
     type:       method
-    name:       SetVal(System.String value,ZennoExtensions.Enums.Emulation emulation,System.Boolean useSelectedItems)
+    name:       SetVal(string value, ZennoExtensions.Enums.Emulation emulation, bool useSelectedItems)
     summary:    'Устанавливает значение элемента.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
+    returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
         - name:  value
           value: 'Устанавливаемое значение.'
@@ -22,3 +22,8 @@ Select, в противном случае - false.'
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a");
+linkElement.SetVal("text").Click();
+```

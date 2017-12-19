@@ -8,14 +8,14 @@ categories:
 title:          MultiLogDebug
 member:
     type:       method
-    name:       MultiLogDebug(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    name:       MultiLogDebug(string message, ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование в режиме Debug через набор логгеров, установленных через свойство LogTo.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
         - name:  messageType
-          value: 'Тип сообщения. Не обязательный параметр, по умолчанию MessageType.Info.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

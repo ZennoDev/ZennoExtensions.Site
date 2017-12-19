@@ -10,7 +10,7 @@ member:
     type:       method
     name:       ClearCacheAndCookie()
     summary:    'Очищает кэш и куки'
-    returns:    'Тот же экземпляр ZennoLab.CommandCenter.Instance для множественных вызовов (Fluent Interface).'
+    returns:    'Тот же экземпляр Instance для множественных вызовов (Fluent Interface).'
     params:
 
 ---

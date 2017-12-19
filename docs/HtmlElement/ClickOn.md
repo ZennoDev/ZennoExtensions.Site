@@ -10,8 +10,12 @@ member:
     type:       method
     name:       ClickOn()
     summary:    'Выполняет клик по элементу.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
+    returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a").ClickOn();
+```

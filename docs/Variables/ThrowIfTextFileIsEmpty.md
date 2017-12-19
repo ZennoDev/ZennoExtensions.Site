@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfTextFileIsEmpty
 member:
     type:       method
-    name:       ThrowIfTextFileIsEmpty(System.String exceptionMessage)
+    name:       ThrowIfTextFileIsEmpty(string exceptionMessage)
     summary:    'Бросает исключение, если файл пуст.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'

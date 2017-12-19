@@ -10,8 +10,13 @@ member:
     type:       method
     name:       ScrollTo()
     summary:    'Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
+    returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a");
+linkElement.ScrollTo().Click();
+```

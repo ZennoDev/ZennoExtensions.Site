@@ -10,7 +10,7 @@ member:
     type:       method
     name:       GetLogger()
     summary:    'Возвращает объект мультилоггера.'
-    returns:    'Экземпляр ZennoExtensions.Loggers.MultiLogger'
+    returns:    'Экземпляр ZennoExtensions.Loggers.MultiLogger.'
     params:
 
 ---

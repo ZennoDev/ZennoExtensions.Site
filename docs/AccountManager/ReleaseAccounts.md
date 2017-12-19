@@ -8,7 +8,7 @@ categories:
 title:          ReleaseAccounts
 member:
     type:       method
-    name:       ReleaseAccounts(System.Predicate{ZennoExtensions.AccountManager.Account} predicate)
+    name:       ReleaseAccounts(System.Predicate&lt;ZennoExtensions.AccountManager.Account&gt; predicate)
     summary:    'Освобождает все аккаунты для которых предикат возвращает true.'
     returns:    'void'
     params:

@@ -8,7 +8,7 @@ categories:
 title:          Load
 member:
     type:       method
-    name:       Load(System.String path)
+    name:       Load(string path)
     summary:    'Загружает объект профиля браузера, сохраненный в файл.'
     returns:    'Профиль браузера'
     params:

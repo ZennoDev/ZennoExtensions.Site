@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfNotBool
 member:
     type:       method
-    name:       ThrowIfNotBool(System.String exceptionMessage)
+    name:       ThrowIfNotBool(string exceptionMessage)
     summary:    'Бросает исключение, если значение переменной не является логическим значением.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'
@@ -20,7 +20,7 @@ member:
 ```csharp
 project.Variables["temp"].Value = "True";
 project.Variables["temp"].ThrowIfNotBool();
-project.SendInfoToLog("Переменная temp содержит логическое значение.", true);  
+project.SendInfoToLog("Переменная temp содержит логическое значение.", true);
 
 project.Variables["temp"].Value = "not boolean";
 project.Variables["temp"].ThrowIfNotBool("Значение переменной temp не является логическим.");  //Выбросит исключение

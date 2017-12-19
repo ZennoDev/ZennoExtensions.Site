@@ -8,14 +8,14 @@ categories:
 title:          LogToFile
 member:
     type:       method
-    name:       LogToFile(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    name:       LogToFile(string message, ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование в файл.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
         - name:  messageType
-          value: 'Тип сообщения.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

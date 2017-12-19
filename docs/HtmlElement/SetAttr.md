@@ -10,7 +10,7 @@ member:
     type:       method
     name:       SetAttr(System.String attrName,System.String attrValue)
     summary:    'Устанавливает значение атрибуа элемента.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.HtmlElement" /> для Fluent Interface'
+    returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
         - name:  attrName
           value: 'Название атрибута.'
@@ -19,3 +19,8 @@ member:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var linkElement = tab.GetElementByXpath("//a");
+linkElement.SetAttr("href", "ya.ru").Click();
+```

@@ -8,7 +8,7 @@ categories:
 title:          GetInstance
 member:
     type:       method
-    name:       GetInstance(ZennoLab.InterfacesLibrary.ProjectModel.IZennoPosterProjectModel project)
+    name:       GetInstance(IZennoPosterProjectModel project)
     summary:    'Возвращает экземпляр класса MultiLogger.'
     returns:    'Экземпляр MultiLogger.'
     params:

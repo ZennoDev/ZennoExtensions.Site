@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfFileNotExists
 member:
     type:       method
-    name:       ThrowIfFileNotExists(System.String exceptionMessage)
+    name:       ThrowIfFileNotExists(string exceptionMessage)
     summary:    'Бросает исключение, если файл не существует по указанному пути.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'

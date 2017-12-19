@@ -8,14 +8,14 @@ categories:
 title:          LogByCustom
 member:
     type:       method
-    name:       LogByCustom(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    name:       LogByCustom(string message, ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование через набор пользовательских логгеров, установленных в свойстве CustomLoggers.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
         - name:  messageType
-          value: 'Тип сообщения.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

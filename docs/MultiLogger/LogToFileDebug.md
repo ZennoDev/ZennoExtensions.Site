@@ -8,14 +8,14 @@ categories:
 title:          LogToFileDebug
 member:
     type:       method
-    name:       LogToFileDebug(System.String message,ZennoExtensions.Enums.MessageType messageType)
+    name:       LogToFileDebug(string message, ZennoExtensions.Enums.MessageType messageType)
     summary:    'Логирование в файл в режиме Debug.'
     returns:    'void'
     params:
         - name:  message
           value: 'Сообщение.'
         - name:  messageType
-          value: 'Тип сообщения.'
+          value: 'Тип сообщения. По умолчанию MessageType.Info.'
 
 ---
 

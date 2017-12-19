@@ -8,9 +8,9 @@ categories:
 title:          ThrowIfNotInt
 member:
     type:       method
-    name:       ThrowIfNotInt(System.String exceptionMessage)
+    name:       ThrowIfNotInt(string exceptionMessage)
     summary:    'Бросает исключение, если значение переменной не является целым числом.'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.InterfacesLibrary.ProjectModel.ILocalVariable" /> для Fluent Interface'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  exceptionMessage
           value: 'Сообщение исключения.'

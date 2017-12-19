@@ -8,7 +8,7 @@ categories:
 title:          GetFreeAccountWithMinExecutionsCount
 member:
     type:       method
-    name:       GetFreeAccountWithMinExecutionsCount(System.Boolean throwExceptionIfNoFreeAccounts,System.String exceptionMessage)
+    name:       GetFreeAccountWithMinExecutionsCount(bool throwExceptionIfNoFreeAccounts, string exceptionMessage)
     summary:    'Возвращает свободный аккаунт с наименьшим количеством запусков.'
     returns:    'Аккаунт.'
     params:

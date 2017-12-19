@@ -8,9 +8,9 @@ categories:
 title:          Replace
 member:
     type:       method
-    name:       Replace(System.String oldValue,System.String newValue)
+    name:       Replace(string oldValue, string newValue)
     summary:    'Заменяет содержимое переменной: все вхождения заданной строки заменены другой заданной строкой.'
-    returns:    'Экземпляр переменной.'
+    returns:    'Тот же экземпляр ILocalVariable для множественных вызовов (Fluent Interface).'
     params:
         - name:  oldValue
           value: 'Строка, которую требуется заменить.'

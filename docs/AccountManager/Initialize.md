@@ -8,7 +8,7 @@ categories:
 title:          Initialize
 member:
     type:       method
-    name:       Initialize(System.String accountsPath,System.String configPath,System.String accountStringSeparator,System.Boolean removeObsoleteAccountsInConfig)
+    name:       Initialize(string accountsPath, string configPath, string accountStringSeparator, bool removeObsoleteAccountsInConfig)
     summary:    'Производит инициализацию менеджера аккаунтов.
 Сопоставляет существующую конфигурацию аккаунтов или создает новую для файла с аккаунтами.'
     returns:    'Экземпляр AccountManager.'

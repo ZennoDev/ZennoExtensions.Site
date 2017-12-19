@@ -15,3 +15,10 @@ member:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+var divElement = tab.GetElementByXpath("//div");
+
+if (divElement.IsHidden())
+    project.SendInfoToLog("Элемент скрыт.", true);
+```

@@ -10,7 +10,7 @@ member:
     type:       method
     name:       Go(string url, string referer)
     summary:    'Выполняет переход по указанному Url. Обертка над Navigate.'
-    returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
+    returns:    'Тот же экземпляр Tab для множественных вызовов (Fluent Interface).'
     params:
         - name:  url
           value: 'Ссылка.'

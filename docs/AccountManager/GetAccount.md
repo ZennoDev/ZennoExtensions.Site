@@ -8,7 +8,7 @@ categories:
 title:          GetAccount
 member:
     type:       method
-    name:       GetAccount(System.Predicate{ZennoExtensions.AccountManager.Account} predicate,System.Boolean throwExceptionIfNoFreeAccounts,System.String exceptionMessage)
+    name:       GetAccount(System.Predicate&lt;ZennoExtensions.AccountManager.Account&gt; predicate, bool throwExceptionIfNoFreeAccounts, string exceptionMessage)
     summary:    'Возвращает аккаунт, удовлетворяющий предикату.'
     returns:    'Аккаунт.'
     params:

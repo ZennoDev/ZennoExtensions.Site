@@ -8,7 +8,7 @@ categories:
 title:          IsArray
 member:
     type:       method
-    name:       IsArray(System.Char separator)
+    name:       IsArray(char separator)
     summary:    'Проверяет является ли строка массивом данных.'
     returns:    'true / false'
     params:

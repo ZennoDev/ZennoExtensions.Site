@@ -8,7 +8,7 @@ categories:
 title:          LoadFromString
 member:
     type:       method
-    name:       LoadFromString(System.String data)
+    name:       LoadFromString(string data)
     summary:    'Загружает объект профиля браузера, сохраненный в строку.'
     returns:    'Профиль браузера'
     params:

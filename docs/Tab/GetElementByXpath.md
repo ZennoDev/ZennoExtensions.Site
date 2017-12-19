@@ -8,7 +8,7 @@ categories:
 title:          GetElementByXpath
 member:
     type:       method
-    name:       GetElementByXpath(System.String xpath,System.Int32 number)
+    name:       GetElementByXpath(string xpath, int number)
     summary:    'Находит элемент по XPath. Обертка над FindElementByXPath.'
     returns:    'Найденный элемент.'
     params:

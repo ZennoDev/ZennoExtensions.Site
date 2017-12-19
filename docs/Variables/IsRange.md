@@ -8,7 +8,7 @@ categories:
 title:          IsRange
 member:
     type:       method
-    name:       IsRange(System.Char separator)
+    name:       IsRange(char separator)
     summary:    'Проверяет является ли значение переменной диапазоном чисел или дат.'
     returns:    'true / false'
     params:
