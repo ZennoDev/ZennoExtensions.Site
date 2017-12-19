@@ -10,8 +10,12 @@ member:
     type:       method
     name:       Refresh()
     summary:    'Выполняет обновление текущей страницы.'
-    returns:    'Тот же объект <see cref="T:ZennoLab.CommandCenter.Tab" />для Fluent Interface'
+    returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
     params:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+tab.Refresh().GetElementByXpath("//a").Click().WaitLoading();
+```

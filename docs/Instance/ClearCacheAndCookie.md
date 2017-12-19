@@ -10,8 +10,12 @@ member:
     type:       method
     name:       ClearCacheAndCookie()
     summary:    'Очищает кэш и куки'
-    returns:    'Тот же экземпляр <see cref="T:ZennoLab.CommandCenter.Instance" /> для Fluent Interface'
+    returns:    'Тот же экземпляр Instance для Fluent Interface'
     params:
 
 ---
 
+```csharp
+instance.CloseAllTabs();
+instance.ClearCacheAndCookie();
+```

@@ -8,9 +8,9 @@ categories:
 title:          Go
 member:
     type:       method
-    name:       Go(System.String url,System.String referer)
+    name:       Go(string url, string referer)
     summary:    'Выполняет переход по указанному Url. Обертка над Navigate.'
-    returns:    'Тот же объект <see cref="T:ZennoLab.CommandCenter.Tab" />для Fluent Interface'
+    returns:    'Тот же объект ZennoLab.CommandCenter.Tab для множественных вызовов (Fluent Interface).'
     params:
         - name:  url
           value: 'Ссылка.'
@@ -19,3 +19,9 @@ member:
 
 ---
 
+```csharp
+var tab = instance.ActiveTab;
+
+tab.Go("ya.ru").WaitLoading()
+   .Go("google.ru").WaitLoading();
+```
