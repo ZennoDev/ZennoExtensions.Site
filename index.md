@@ -27,8 +27,8 @@ title: Подключение библиотеки
     
     ![](https://pp.userapi.com/c841324/v841324369/450e8/UBIt7n8z5Pg.jpg)
 3. Добавьте также сборки
-    + System.Xml (версия 4.0.0)
-    + System.Runtime.Serialization (версия 4.0.0)
+    + System.Xml (версия 4.0.0.0)
+    + System.Runtime.Serialization (версия 4.0.0.0)
 
 ***
 
