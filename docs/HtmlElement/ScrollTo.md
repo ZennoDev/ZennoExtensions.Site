@@ -9,7 +9,7 @@ title:          ScrollTo
 member:
     type:       method
     name:       ScrollTo()
-    summary:    'Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().'
+    summary:    'Прокручивает страницу к текущему элементу. Обертка над ScrollIntoView().'
     returns:    'Тот же экземпляр HtmlElement для множественных вызовов (Fluent Interface).'
     params:
 

@@ -22,7 +22,7 @@ member:
 var generationRules = new GenerationRules();
 
 // Указываем чтобы использовался случайно Firefox или Chrome
-generationRules.BrowserType = BrowserType.Firefox | BrowserType.Chrome;
+generationRules.BrowserType = BrowserType.GoogleChrome | BrowserType.MozillaFirefox;
 
 // Генерируем профиль браузера
 var profile = BrowserManager.Generate();

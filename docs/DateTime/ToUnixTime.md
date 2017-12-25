@@ -10,12 +10,12 @@ member:
     type:       method
     name:       ToUnixTime()
     summary:    'Конвертирует дату в число в формате UnixTime.'
-    returns:    'void'
+    returns:    'double'
     params:
 
 ---
 
 ```csharp
 DateTime date = new DateTime(2017, 12, 12);
-int unixTime = date.ToUnixTime();
+var unixTime = date.ToUnixTime();
 ```

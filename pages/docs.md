@@ -152,7 +152,7 @@ permalink: /docs
 [element.GetAttr]({{ site.url }}/docs/HtmlElement/GetAttr/) | Получает значение атрибуа элемента.
 [element.SetVal]({{ site.url }}/docs/HtmlElement/SetVal/) | Устанавливает значение элемента.
 [element.GetVal]({{ site.url }}/docs/HtmlElement/GetVal/) | Возвращает значение элемента. Обертка над GetValue();
-[element.ScrollTo]({{ site.url }}/docs/HtmlElement/ScrollTo/) | Прокручивает струницу к текущему элементу. Обертка над ScrollIntoView().
+[element.ScrollTo]({{ site.url }}/docs/HtmlElement/ScrollTo/) | Прокручивает страницу к текущему элементу. Обертка над ScrollIntoView().
 [element.ThrowIfNull]({{ site.url }}/docs/HtmlElement/ThrowIfNull/) | Бросает исключение, если элемент пуст (свойство IsVoid возвращает true).
 [element.ThrowIfHidden]({{ site.url }}/docs/HtmlElement/ThrowIfHidden/) | Бросает исключение, если елемент скрыт.
 [element.ThrowIfNullOrHidden]({{ site.url }}/docs/HtmlElement/ThrowIfNullOrHidden/) | Бросает исключение, если елемент пуст (свойство IsVoid возвращает true) или скрыт.

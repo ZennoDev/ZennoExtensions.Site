@@ -17,5 +17,5 @@ member:
 
 ```csharp
 var tab = instance.ActiveTab;
-tab.Refresh().GetElementByXpath("//a").ClickOn().ParentTab.WaitLoading();
+tab.Refresh().WaitLoading().GetElementByXpath("//a").ClickOn().ParentTab.WaitLoading();
 ```
