@@ -29,7 +29,7 @@ var generationRules = new GenerationRules();
 generationRules.BrowserType = BrowserType.GoogleChrome | BrowserType.MozillaFirefox;
 
 // Генерируем профиль браузера
-var profile = BrowserManager.Generate();
+var profile = BrowserManager.Generate(generationRules);
 
 // Применяем к ZennoPoster'у
 BrowserManager.Setup(profile, instance, project);
