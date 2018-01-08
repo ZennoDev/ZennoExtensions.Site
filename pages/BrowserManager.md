@@ -54,8 +54,8 @@ var profile = BrowserManager.Generate();
 ```csharp
 var rules = new GenerationRules();
 rules.BrowserType = BrowserType.MozillaFirefox;
-rules.BrowserSettings.DoNotTrack = BoolFilter.True | BoolFilter.False;
-rules.BrowserSettings.CanvasRenderMode = CanvasMode.Emulate;
+rules.Settings.DoNotTrack = BoolFilter.True | BoolFilter.False;
+rules.Settings.CanvasRenderMode = CanvasWorkMode.Emulate;
 rules.Navigator.GenerateHardwareConcurrency = BoolFilter.True;
 rules.Screen.UseScreenResolutionGeneration = BoolFilter.True;
 
@@ -64,7 +64,7 @@ var profile = BrowserManager.Generate(rules);
 
 Обратите внимание, свойствам, принимающим перечисление, можно передать сразу несколько значений. Тогда во время генерации будет выбрано случайное из переданных значений:
 ```csharp
-rules.BrowserSettings.DoNotTrack = BoolFilter.True | BoolFilter.False;
+rules.Settings.DoNotTrack = BoolFilter.True | BoolFilter.False;
 ```
 
 После генерации профиля его нужно применить к ZennoPoster'у:
